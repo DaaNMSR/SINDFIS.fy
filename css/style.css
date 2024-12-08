@@ -1,0 +1,243 @@
+body {
+    margin: 0;
+    font-family: 'Circe';
+    background: whitesmoke;
+}
+
+.header {
+    display: grid;
+    justify-content: center;
+    background-color: #1FA8AD;
+    width: 100%;
+    height: 96px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header-inner-wrapper {
+    display: flex;
+    padding-top: 24px;
+}
+
+.header-inner-wrapper__a,
+.header-inner-wrapper__img {
+    width: 200px;
+    height: 48px;
+}
+
+.header-menu {
+    display: flex;
+    list-style: none;
+    padding-left: 31.5px;
+    padding-right: 31.5px;
+}
+.header-menu__list {
+    font-size: 18px;
+}
+
+.header-inner-wrapper__btn {
+    font-family: 'Circe';
+}
+
+.header-menu {
+    gap: 32px;
+    margin-top: 12.5px;
+}
+
+.header-menu__a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.header-inner-wrapper__btn {
+    width: 175px;
+    height: 38px;
+    margin-top: 5px;
+    padding: 12px 20px 10px 20px;
+    color: #1FA8AD;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 16.25px;
+    letter-spacing: 0.05em;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.header-inner-wrapper__right-img {
+    width: 48px;
+    height: 48px;
+}
+.header-inner-wrapper__right {
+    display: flex;
+    gap: 19px;
+    padding-right: 32px;
+}
+
+.first-screen {
+    background: url('/images/first-screen__bgc.png');
+    background-size: 100% 600px;
+    margin-top: 96px;
+    background-repeat: no-repeat;
+}
+
+.about-h1__text,
+.info-h1 {
+    margin: 160px auto 80px auto;
+    display: flex;
+    justify-content: center;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 70px;
+}
+
+.first-screen__h1 {
+    font-size: 56px;
+    line-height: 70px;
+    width: 636px;
+    margin: 0;
+    padding-top: 124px;
+}
+
+.first-screen__inner-wrapper {
+    padding-top: 139px;
+}
+
+.first-screen__inner-wrapper-card {
+    height: 254px;
+}
+
+.first-screen__inner-wrapper-card-1 {
+    background-color: #1FA8AD;
+}
+
+.first-screen__inner-wrapper-card-2 {
+    background-color: #fff;
+}
+
+.first-screen__item-header {
+    display: flex;
+    align-items: center;
+    padding-left: 17px;
+}
+
+.first-screen__item-p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18.75px;
+    width: 253px;
+    margin-left: 116px;
+}
+
+.first-screen__item-p-1,
+.first-screen__item-h2-1 {
+    color: #fff;
+}
+
+.first-screen__item-h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-top: 37.5px;
+}
+
+.first-screen__item-img {
+    padding-top: 19px;
+    padding-right: 20px;
+}
+
+.about-content {
+    margin: 0 auto;
+}
+
+.about-p {
+    padding-bottom: 60px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content-img {
+    margin: 60px 0;
+}
+
+.tabs-nav {
+    display: flex;
+    gap: 24px;
+    margin: 0 auto 60px auto;
+}
+
+.tabs__nav-btn {
+    cursor: pointer;
+    font-family: 'Circe';
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22.5px;
+    white-space: nowrap;
+    border: none;
+    background: #fff;
+}
+
+.tabs__item.active {
+    display: block;
+}
+
+.tabs__nav-btn.active {
+    background-color: #1FA8AD;
+    color: #fff;
+    cursor: default;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.tabs__content {
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    gap:81px
+}
+
+.tabs__item {
+    display: none;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22.5px;
+}
+
+.info__p {
+    width: 242px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+}
+
+.info__topic-p {
+    font-size: 18px;
+    line-height: 22.5px;
+}
+
+.info__first,
+.info__second {
+    column-gap: 24px;
+}
+
+.info__third-1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.info__first-1,
+.info__first-2,
+.info__second-1,
+.info__second-2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 60px;
+}
+
