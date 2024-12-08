@@ -1,3 +1,9 @@
+const headerMenu = document.getElementById('header');
+const headerMenuBtn = document.getElementById('burger');
+headerMenuBtn.addEventListener('click', () => {
+    headerMenu.classList.toggle('open')
+})
+
 const tabsBtn = document.querySelectorAll('.tabs__nav-btn');
 const tabsItems = document.querySelectorAll('.tabs__item');
 

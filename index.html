@@ -11,8 +11,13 @@
 </head>
 <body>
     <div class="container">
-        <header class="header">
+        <header class="header" id="header">
             <div class="header-inner-wrapper">
+                <button class="header__burger-btn" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <a href="#" class="header-inner-wrapper__a">
                     <img class="header-inner-wrapper__img" src="images/logo.png" alt="">
                 </a>
@@ -47,43 +52,51 @@
     </div> 
     <div class="first-screen">
         <div class="container">
-            <h1 class="first-screen__h1">Консалтинговая компания Эксперт-Рос инвест</h1>
+            <h1 class="first-screen__h1">Консалтинговая<br/>компания Эксперт-Рос<br/>инвест</h1>
             <div class="first-screen__inner-wrapper row">
-                <div class="col-4">
-                    <div class="first-screen__inner-wrapper-card first-screen__inner-wrapper-card-1">
-                        <div class="first-screen__item-header">
-                            <img src="images/service-item__icon1.png" class="first-screen__item-img">
-                            <h2 class="first-screen__item-h2 first-screen__item-h2-1">Сопровождение<br/>бизнеса</h2>
-                        </div>
-                        <p class="first-screen__item-p first-screen__item-p-1">Aliquet ac leo arcu erat id sit rhoncus lectus.Donec pretium cursus pretium scelerisque quis posuere sed aliquet. Nibh convallis mi sodales pretium adipiscing ac. Turpis vitae augue.</p>
+                <div class="first-screen__inner-wrapper-card first-screen__inner-wrapper-card-1 col">
+                    <div class="first-screen__item-header">
+                        <img src="images/service-item__icon1.png" class="first-screen__item-img">
+                        <h2 class="first-screen__item-h2 first-screen__item-h2-1">Сопровождение<br/>бизнеса</h2>
                     </div>
+                    <p class="first-screen__item-p first-screen__item-p-1">
+                        Aliquet ac leo arcu erat id sit rhoncus lectus.
+                        Donec pretium cursus pretium scelerisque quis posuere sed aliquet.
+                        Nibh convallis mi sodales pretium adipiscing ac. 
+                        Turpis vitae augue.
+                    </p>
                 </div>
-                <div class="col-4">
-                    <div class="first-screen__inner-wrapper-card first-screen__inner-wrapper-card-2">
-                        <div class="first-screen__item-header">
-                            <img src="images/service-item__icon2.png" class="first-screen__item-img">
-                            <h2 class="first-screen__item-h2">Дистанционное<br/>обучение</h2>
-                        </div>
-                        <p class="first-screen__item-p">Enim urna ac nunc consectetur sed donec. Facilisis bibendum suspendisse at pretium amet. Egestas a ultrices odio dignissim varius. Ipsum egestas nisl.</p>
+                <div class="first-screen__inner-wrapper-card first-screen__inner-wrapper-card-2 col">
+                    <div class="first-screen__item-header">
+                        <img src="images/service-item__icon2.png" class="first-screen__item-img">
+                        <h2 class="first-screen__item-h2">Дистанционное<br/>обучение</h2>
                     </div>
+                    <p class="first-screen__item-p">
+                        Enim urna ac nunc consectetur sed donec.
+                        Facilisis bibendum suspendisse at pretium amet. 
+                        Egestas a ultrices odio dignissim varius. Ipsum egestas nisl.
+                    </p>
                 </div>
-                <div class="col-4">
-                    <div class="first-screen__inner-wrapper-card first-screen__inner-wrapper-card-2">
-                        <div class="first-screen__item-header">
-                            <img src="images/service-item__icon2.png" class="first-screen__item-img">
-                            <h2 class="first-screen__item-h2">Лицензирование<br/>компаний</h2>
-                        </div>
-                        <p class="first-screen__item-p">Urna arcu suspendisse nibh volutpat. Felis diam odio vitae sit. Eget purus sed tincidunt tortor at. Viverra adipiscing vitae iaculis sapien amet sit morbi tincidunt adipiscing. Sagittis eget.</p>
+                <div class="first-screen__inner-wrapper-card first-screen__inner-wrapper-card-2 col">
+                    <div class="first-screen__item-header">
+                        <img src="images/service-item__icon2.png" class="first-screen__item-img">
+                        <h2 class="first-screen__item-h2">Лицензирование<br/>компаний</h2>
                     </div>
-                </div>
-            </div>
+                    <p class="first-screen__item-p">
+                        Urna arcu suspendisse nibh volutpat. 
+                        Felis diam odio vitae sit. Eget purus sed tincidunt tortor at. 
+                        Viverra adipiscing vitae iaculis sapien amet sit morbi tincidunt adipiscing. 
+                        Sagittis eget.
+                    </p>
+                </div>   
+            </div> 
         </div>
     </div> 
     <div class="container">
         <div class="about">
             <div class="about-h1">
                 <h1 class="about-h1__text">О компании</h1>
-                <p class="about-p col-8">
+                <p class="about-p col-xl-8">
                     Aliquam augue enim phasellus egestas nisl urna senectus ultricies.
                     Vitae consequat odio faucibus eget suspendisse ultricies. Pharetra diam viverra ut adipiscing aliquam.
                     Massa nulla lobortis nulla tellus ut ut elementum. Viverra fermentum adipiscing cras purus a.
@@ -91,21 +104,21 @@
                 </p>
             </div>
             <div class="tabs">
-                <div class="tabs-nav col-8">
+                <div class="tabs-nav row">
                     <button class="tabs__nav-btn active" type="button" data-tab="#tab_1">Команда</button>
                     <button class="tabs__nav-btn" type="button" data-tab="#tab_2">Наши компетенции</button>
                     <button class="tabs__nav-btn" type="button" data-tab="#tab_3">Профессионалы</button>
                     <button class="tabs__nav-btn" type="button" data-tab="#tab_4">Взаимодействие с органами</button>
                 </div>
-                <div class="about-content col-10">
-                    <div class="tabs__content">
-                        <div class="tabs__item active col-5" id='tab_1'>
+                <div class="about-content row">
+                    <div class="tabs__content col-xl-10">
+                        <div class="tabs__item active col-xl-5" id='tab_1'>
                             Fringilla dignissim lectus velit amet nisi erat sit. Nisi facilisi pretium pharetra amet a mauris amet amet ut.
                             Odio tellus et in imperdiet pellentesque id. Scelerisque et a proin nisi. Ut interdum lobortis porta enim viverra eleifend sodales mollis.
                             Gravida in senectus lacinia eget nec. Mauris eu sed et quisque dignissim. Odio sed eget id vitae sollicitudin sodales augue egestas.
                             Sapien elementum nisi est ornare aliquam viverra nibh amet donec.
                         </div>
-                        <div class="tabs__item col-5" id='tab_2'>
+                        <div class="tabs__item col-xl-5" id='tab_2'>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                             Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                             when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -113,12 +126,12 @@
                             remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
                             and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                         </div>
-                        <div class="tabs__item col-5" id='tab_3'>
+                        <div class="tabs__item col-xl-5" id='tab_3'>
                             The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
                             Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form,
                             accompanied by English versions from the 1914 translation by H. Rackham.
                         </div>
-                        <div class="tabs__item col-5" id='tab_4'>
+                        <div class="tabs__item col-xl-5" id='tab_4'>
                             Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
                             making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
                             looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
@@ -131,39 +144,103 @@
             
         </div>
     </div>
+    <h1 class="info-h1">Почему мы?</h1>
     <div class="container">
-        <h1 class="info-h1">Почему мы?</h1>
-        <div class="info__content">
-            <div class="info__first row">
-                <div class="info__first-1 col-3">
-                    <img src="images/target-img.png" class="info_img">
-                    <p class="info__p">Достижение поставленных клиентом целей</p>
+        <div class="info__container row">
+            <div class="info__content col-xl-6">
+                <div class="info__first row">
+                    <div class="info__first-1 col-xl-3">
+                        <img src="images/target-img.png" class="info_img">
+                        <p class="info__p">Достижение поставленных клиентом целей</p>
+                    </div>
+                    <div class="info__first-2 col-xl-3">
+                        <img src="images/target-img.png" class="info_img"> 
+                        <p class="info__p">Нацелены на долгосрочное сотрудничество</p>
+                    </div>
                 </div>
-                <div class="info__first-2 col-3">
-                    <img src="images/target-img.png" class="info_img"> 
-                    <p class="info__p">Нацелены на долгосрочное сотрудничество</p>
+                <div class="info__second row">
+                    <div class="info__second-1 col-xl-3">
+                        <img src="images/target-img.png" class="info_img">
+                        <p class="info__p">Лояльная ценовая политика</p>
+                    </div>
+                    <div class="info__second-2 col-xl-3">
+                        <img src="images/target-img.png" class="info_img">
+                        <p class="info__p">Всегда готовы идти навстречу клиенту</p>
+                    </div>
+                </div>
+                <div class="info__third row">
+                    <div class="info__third-1 col-xl-3">
+                        <img src="images/target-img.png" class="info_img">
+                        <p class="info__p">Высокая квалификация и практический опыт</p>
+                    </div>
                 </div>
             </div>
-            <div class="info__second row">
-                <div class="info__second-1 col-3">
-                    <img src="images/target-img.png" class="info_img">
-                    <p class="info__p">Лояльная ценовая политика</p>
-                </div>
-                <div class="info__second-2 col-3">
-                    <img src="images/target-img.png" class="info_img">
-                    <p class="info__p">Всегда готовы идти навстречу клиенту</p>
-                </div>
-            </div>
-            <div class="info__third col-3">
-                <div class="info__third-1">
-                    <img src="images/target-img.png" class="info_img">
-                    <p class="info__p">Высокая квалификация и практический опыт</p>
-                </div>
-            </div>
-            <div class="info__topic col-4">
+            <div class="info__topic col-xl-4">
                 <p class="info__topic-p">Non diam laoreet faucibus amet ut lacus sed convallis viverra. At purus mattis in consectetur vel.</p>
                 <img src="images/why__graph.png" class="info__topic-img">
             </div>
+        </div>
+    </div>
+    <h1 class="review-h1">Отзывы о нашей работе</h1>
+    <div class="container">
+        <div class="slider row">
+            <div class="slider__item col">
+                <img src="images/review__logo1.png"  class="slider__img">
+                <div class="slider__item-content">
+                    <h4 class="slider__item-h">Blandit placerat eget ultrices gravida</h4>
+                    <p class="slider__item-text">
+                        Nisl id blandit pharetra sodales vel diam vitae.
+                        Aliquet pulvinar nunc nam faucibus pellentesque etiam et. 
+                        Ac iaculis velit amet pulvinar iaculis purus sociis in elementum. 
+                        Eu ut magna tellus ipsum nibh volutpat aliquam at. 
+                        Tempor sed habitant lectus quam tristique. Condimentum tortor massa est in eu enim. 
+                        Metus nullam egestas eget libero vel. Amet nulla egestas et ipsum. 
+                        met eu ac amet non aliquam et amet. Quis a auctor ut cras suspendisse in sem elementum nisl. 
+                        Eu aliquet lobortis.
+                    </p>
+                    <p class="slider__item-name">ИВАНОВ ИВАН</p>
+                    <p class="slider__item-post">Коммерческий директор</p>
+                </div>
+            </div>
+            <div class="slider__item col">
+                <img src="images/review__logo2.png"  class="slider__img">
+                <div class="slider__item-content">
+                    <h4 class="slider__item-h">Platea libero netus vel mauris massa</h4>
+                    <p class="slider__item-text">
+                        Ultrices enim vitae dignissim pharetra at. In id enim vulputate massa massa. 
+                        Nisl quis purus amet mauris egestas porta non. Eget platea pharetra at leo faucibus nibh ipsum convallis euismod. 
+                        Non quam turpis massa et cras facilisis ut blandit in. 
+                        Faucibus sed in pellentesque morbi adipiscing proin consequat viverra vitae. 
+                        Molestie pulvinar facilisi lorem pharetra. In turpis lectus non fermentum scelerisque lectus montes massa leo. 
+                        Lectus in non tortor cursus. Ultrices sollicitudin cursus dictumst.
+                    </p>
+                    <p class="slider__item-name">ИВАНОВ ИВАН</p>
+                    <p class="slider__item-post">Коммерческий директор</p>
+                </div>
+            </div>
+            <div class="slider__item col">
+                <img src="images/review__logo3.png"  class="slider__img">
+                <div class="slider__item-content">
+                    <h4 class="slider__item-h">Blandit placerat eget ultrices gravida</h4>
+                    <p class="slider__item-text">
+                        Nisl id blandit pharetra sodales vel diam vitae.
+                        Aliquet pulvinar nunc nam faucibus pellentesque etiam et. 
+                        Ac iaculis velit amet pulvinar iaculis purus sociis in elementum. 
+                        Eu ut magna tellus ipsum nibh volutpat aliquam at. 
+                        Tempor sed habitant lectus quam tristique. Condimentum tortor massa est in eu enim. 
+                        Metus nullam egestas eget libero vel. Amet nulla egestas et ipsum. 
+                        met eu ac amet non aliquam et amet. Quis a auctor ut cras suspendisse in sem elementum nisl. 
+                        Eu aliquet lobortis.
+                    </p>
+                    <p class="slider__item-name">ИВАНОВ ИВАН</p>
+                    <p class="slider__item-post">Коммерческий директор</p>
+                </div>
+            </div>
+        </div>
+        <div class="review__navigator">
+            <button class="review__btn"><i class="review__btn-i review__btn-right"></i></button>
+            <span class="review__index">1/7</span>
+            <button class="review__btn"><i class="review__btn-i review__btn-left"></i></button>
         </div>
     </div>
 </body>
