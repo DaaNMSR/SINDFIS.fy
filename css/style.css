@@ -2,7 +2,6 @@ body {
     margin: 0;
     font-family: 'Circe';
     background: whitesmoke;
-    overflow-x: hidden;
 }
 
 .header {
@@ -31,6 +30,28 @@ body {
     border: none;
     background-color: #1FA8AD;
     cursor: pointer;
+}
+
+#form-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#form-modal.open-modal {
+    display: block;
+}
+
+.popup__close {
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    left: 15px;
+    font-size: 21px;
+    color: #1FA8AD;
 }
 
 .header__burger-btn span {
@@ -270,8 +291,8 @@ body {
     line-height: 22.5px;
 }
 
-.info__first-1,
-.info__first-2 {
+.info__first,
+.info__second {
     column-gap: 24px;
 }
 
@@ -282,14 +303,12 @@ body {
     margin: 0 auto;
 }
 
-
 .info__third-1,
 .info__first-1,
 .info__first-2,
 .info__second-1,
 .info__second-2 {
     min-width: 306px;
-    column-gap: 24px;
 }
 
 .info__first-1,
@@ -299,7 +318,7 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding-bottom: 60px;
+    padding-bottom: 36px;
 }
 
 .info__container {
@@ -308,12 +327,16 @@ body {
 }
 
 .slider {
+    justify-content: center;
     gap: 24px;
 }
 .slider__item {
     max-width: 420px;
     background-color: #fff;
-    margin: 0 auto;
+}
+
+.slider__item:last-child {
+   margin: 0 auto;
 }
 
 .slider__item-content {
@@ -358,20 +381,27 @@ body {
 
 .review__navigator {
     margin-top: 60px;
+    gap: 40px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .review__btn {
+    padding: 16px;
     cursor: pointer;
     background: #1FA8AD;
     border: none;
 }
 
+.btn-opacity {
+    opacity: 50%;
+}
+
 .review__btn-i {
-    border: solid #fff;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
+    border: 2.5px solid #fff;
+    border-width: 0 2.5px 2.5px 0;
+    display: block;
     padding: 3px;
 }
 
@@ -383,6 +413,145 @@ body {
 .review__btn-left {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
+}
+
+.review__index {
+    letter-spacing: 12px;
+}
+
+.slider-2 {
+    display: none;
+}
+
+.form-content__h {
+    font-size: 56px;
+    font-weight: 800;
+}
+
+.form-content__span {
+    color: #1FA8AD;
+}
+
+.form {
+    background-color: #fff;
+}
+
+.form-input {
+    border: 1px solid #1A1A1A;
+    padding: 20px 24px 20px 24px;
+    margin: 0 45px 0 45px;
+}
+
+.form-input:nth-child(2),
+.form-input:nth-child(3) {
+    margin-bottom: 24px;
+}
+
+.form-input:nth-child(4) {
+    margin-bottom: 28px;
+}
+
+.form-content {
+    margin: 160px 0 160px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__h {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+    margin: 48px 0 40px 0;
+}
+
+.forms {
+    display: grid;
+}
+
+.forms__checkbox {
+    display: flex;
+    margin-left: 45px;
+    gap: 16px;
+    align-items: center;
+    accent-color: #1FA8AD;
+}
+
+.form-input {
+    font-family: 'Circe';
+    font-size: 15px;
+    line-height: 18.75px;
+}
+
+#forms-checkbox {
+    margin: 0;
+    height: 20px;
+    width: 20px;
+}
+
+#forms-label {
+    color: #1FA8AD;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.form-btn__submit {
+    font-family: 'Circe';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    background-color: #1FA8AD;
+    color: #fff;
+    padding: 20px 40px 20px 40px; 
+    margin: 36px 156.5px 48px 156.5px;
+    border: none;
+    cursor: pointer;
+}
+
+#forms-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid #1FA8AD;
+    cursor: pointer;
+}
+
+#forms-checkbox:checked {
+    background-color: #1FA8AD;
+}
+
+.footer {
+    position: absolute;
+    display: grid;
+    left: 0;
+    background-color: #1FA8AD;
+    width: 100%;
+    padding-top: 60px;
+    justify-content:center;
+} 
+
+.footer-inner-wrapper {
+    padding: 0;
+    border-bottom: 1px solid #FFFFFF4D;
+}
+
+.footer-menu {
+    margin-bottom: 72.5px;
+}
+
+.footer__copyright {
+    display: flex;
+}
+
+.footer__copyright-p {
+    margin: 32px auto 32px auto;
+    font-size: 13px;
+    line-height: 16.25px;
+    letter-spacing: 0.05em;
+    color: #fff;
+    opacity: 50%;
 }
 
 @media (max-width: 1330px) {
@@ -415,3 +584,8 @@ body {
     }
 }
 
+@media (max-width: 1399px) {
+    .info__third-1 {
+        margin: 0;
+    }
+}
