@@ -58,30 +58,26 @@ nextBtn.addEventListener('click', () => {
     secondSlider.style.display = 'flex';
 })
 
-const openPopUp = document.querySelectorAll('.open__popup');
+const openPopUpBtns = document.querySelectorAll('.open__popup');
 const closePopUp = document.getElementById('close__popup');
 const popUp = document.getElementById('form-modal');
 
-openPopUp.forEach((btn) => {
+
+openPopUpBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
         popUp.classList.add('open-modal')
     })
+    
+    closePopUp.addEventListener('click', () => {
+        popUp.classList.remove('open-modal')
+    })
 })
+ 
 
 
-const openedPopUp = popUp.classList.contains('open-modal');
-console.log(openedPopUp);
 
-document.addEventListener('click', (e) => {
-        const clickPopUp = e.composedPath().includes(popUp);
-        if (clickPopUp) {
-            popUp.classList.remove('open-modal')
-        }
-})
 
-closePopUp.addEventListener('click', () => {
-    popUp.classList.remove('open-modal')
-})
+
 
 
 
