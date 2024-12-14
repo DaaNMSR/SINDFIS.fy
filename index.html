@@ -6,6 +6,7 @@
     <title>SINDNFIS</title>
     <link rel="stylesheet" href="css/circe.css">
     <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
@@ -48,27 +49,13 @@
                 </div>
                 <button class="header-inner-wrapper__btn open__popup">ЗАКАЗАТЬ ЗВОНОК</button>
             </div>
-            <div class="form col-xl-5 col-md-8 col-sm-12" id="form-modal">
-                <h5 class="form__h"><span class="form-content__span">ЗАКАЗАТЬ</span></br>ЗВОНОК</h5>
-                <form class="forms" action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="03fc5892-27b4-4b74-a685-982941c651cc">
-                    <input type="text" name="name" id="input-name" class="form-input" required placeholder="Имя"/>
-                    <input type="tel" name="tel" id="input-tel" class="form-input" required placeholder="Телефон"/>
-                    <div class="forms__checkbox">
-                        <input type="checkbox" id="forms-checkbox" required/>
-                        <label for="forms-checkbox" id="forms-label">Согласие на обработку персональных данных</label>
-                    </div>
-                    <input type="submit" value="ОТПРАВИТЬ" class="form-btn__submit"/>
-                </form>
-                <div class="popup__close" id="close__popup">&#10006</div>
-            </div>
         </header>
     </div> 
     <div class="first-screen">
         <div class="container">
             <h1 class="first-screen__h1">Консалтинговая<br/>компания Эксперт-Рос<br/>инвест</h1>
             <div class="first-screen__inner-wrapper row">
-                <div class="first-screen__inner-wrapper-card first-screen__inner-wrapper-card-1 col">
+                <div class="first-screen__inner-wrapper-card first-screen__inner-wrapper-card-active col">
                     <div class="first-screen__item-header">
                         <img src="images/service-item__icon1.png" class="first-screen__item-img">
                         <h2 class="first-screen__item-h2 first-screen__item-h2-1">Сопровождение<br/>бизнеса</h2>
@@ -80,7 +67,7 @@
                         Turpis vitae augue.
                     </p>
                 </div>
-                <div class="first-screen__inner-wrapper-card first-screen__inner-wrapper-card-2 col">
+                <div class="first-screen__inner-wrapper-card col">
                     <div class="first-screen__item-header">
                         <img src="images/service-item__icon2.png" class="first-screen__item-img">
                         <h2 class="first-screen__item-h2">Дистанционное<br/>обучение</h2>
@@ -91,7 +78,7 @@
                         Egestas a ultrices odio dignissim varius. Ipsum egestas nisl.
                     </p>
                 </div>
-                <div class="first-screen__inner-wrapper-card first-screen__inner-wrapper-card-2 col">
+                <div class="first-screen__inner-wrapper-card col">
                     <div class="first-screen__item-header">
                         <img src="images/service-item__icon2.png" class="first-screen__item-img">
                         <h2 class="first-screen__item-h2">Лицензирование<br/>компаний</h2>
@@ -368,6 +355,22 @@
                     <p class="footer__copyright-p">© СЕВЕРО-ЗАПАДНЫЙ ЮРИДИЧЕСКИЙ ЦЕНТР "АЛЬЯНС" . 2023 г.</p>
                 </div>
         </footer>
+    </div>
+    <div class="form col-12" id="form-modal">
+        <div class="form__content col-xl-6 col-md-6 col-sm-12" id="form__content">
+            <h5 class="form__h form__content_h"><span class="form-content__span">ЗАКАЗАТЬ</span></br>ЗВОНОК</h5>
+            <form class="forms" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="03fc5892-27b4-4b74-a685-982941c651cc">
+                <input type="text" name="name" id="input-name" class="form-input" required placeholder="Имя"/>
+                <input type="tel" name="tel" id="input-tel" class="form-input" required placeholder="Телефон"/>
+                <div class="forms__checkbox">
+                    <input type="checkbox" id="forms-checkbox" required/>
+                    <label for="forms-checkbox" id="forms-label">Согласие на обработку персональных данных</label>
+                </div>
+                <input type="submit" value="ОТПРАВИТЬ" class="form-btn__submit"/>
+            </form>
+                <div class="popup__close" id="close__popup">&#10006</div>
+        </div>
     </div>
 </body> 
 </html>

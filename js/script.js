@@ -1,5 +1,6 @@
 const headerMenu = document.getElementById('header');
 const headerMenuBtn = document.getElementById('burger');
+
 headerMenuBtn.addEventListener('click', () => {
     headerMenu.classList.toggle('open')
 })
@@ -62,7 +63,6 @@ const openPopUpBtns = document.querySelectorAll('.open__popup');
 const closePopUp = document.getElementById('close__popup');
 const popUp = document.getElementById('form-modal');
 
-
 openPopUpBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
         popUp.classList.add('open-modal')
@@ -70,20 +70,40 @@ openPopUpBtns.forEach((btn) => {
     
     closePopUp.addEventListener('click', () => {
         popUp.classList.remove('open-modal')
-    })
+    })   
 })
- 
+
+const formContent = document.getElementById('form__content');
+
+document.addEventListener('keydown', function(e) {
+	if( e.keyCode == 27 ){ 
+        popUp.classList.remove('open-modal')
+	}
+});
+
+popUp.addEventListener('click', (event) => {
+    const target = event.target;
+    if (target === popUp) {
+        popUp.classList.remove('open-modal')
+    }
+})
 
 
+const cards = document.querySelectorAll('.first-screen__inner-wrapper-card');
 
-
-
-
-
-
-
+cards.forEach((card) => {
+    card.addEventListener('click', () => {
+        let currentCard = card;
+        if(!currentCard.classList.contains('first-screen__inner-wrapper-card-active')) {
+                cards.forEach((card) => {
+                    card.classList.remove('first-screen__inner-wrapper-card-active')
+                })
+        }
+        currentCard.classList.add('first-screen__inner-wrapper-card-active')
+    });
+   
+})
     
-
 
 
 
