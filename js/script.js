@@ -1,108 +1,254 @@
-const headerMenu = document.getElementById('header');
-const headerMenuBtn = document.getElementById('burger');
+/////////////////////// burger-menu START //////////////////////////
 
-headerMenuBtn.addEventListener('click', () => {
-    headerMenu.classList.toggle('open')
-})
+const headerContent = document.getElementById('header-content');
+const headerMenuBurgerButton = document.getElementById('burger');
+const body = document.getElementById('body');
 
-const tabsBtn = document.querySelectorAll('.tabs__nav-btn');
-const tabsItems = document.querySelectorAll('.tabs__item');
+const openAndCloseBurgerMenu = () => {
+    headerContent.classList.toggle('open');
+    headerMenuBurgerButton.classList.toggle('open');
+    body.classList.toggle('scroll-off')
+}
 
-tabsBtn.forEach((item) => {
-    item.addEventListener('click', () => {
-        let currentBtn = item;
-        let tabId = currentBtn.getAttribute('data-tab');
-        let currentTab = document.querySelector(tabId);
+headerMenuBurgerButton.addEventListener('click', openAndCloseBurgerMenu)
 
-        if(!currentBtn.classList.contains('active')) {
-            tabsBtn.forEach((item) => {
-                item.classList.remove('active')
-             });
-     
-             tabsItems.forEach((item) => {
-                 item.classList.remove('active')
-              });
-     
-             currentBtn.classList.add('active');
-             currentTab.classList.add('active');
-        }
-    })
-});
-
-const firstSlider = document.getElementById('first-slider');
-const secondSlider = document.getElementById('second-slider');
-const prevBtn = document.getElementById('prev-btn');
-const nextBtn = document.getElementById('next-btn');
-const reviewIndex = document.getElementById('review-index');
-
-prevBtn.addEventListener('click', () => {
-    let indexFirst = '1/2';
-
-    reviewIndex.innerHTML = indexFirst;
-
-    nextBtn.classList.remove('btn-opacity');
-    prevBtn.classList.add('btn-opacity');
-
-    firstSlider.style.display = 'flex';
-    secondSlider.style.display = 'none';
-})
-   
-nextBtn.addEventListener('click', () => {
-    let indexSecond = '2/2';
-
-    reviewIndex.innerHTML = indexSecond;
-
-    nextBtn.classList.add('btn-opacity');
-    prevBtn.classList.remove('btn-opacity');
-
-    firstSlider.style.display = 'none';
-    secondSlider.style.display = 'flex';
-})
-
-const openPopUpBtns = document.querySelectorAll('.open__popup');
-const closePopUp = document.getElementById('close__popup');
-const popUp = document.getElementById('form-modal');
-
-openPopUpBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-        popUp.classList.add('open-modal')
-    })
-    
-    closePopUp.addEventListener('click', () => {
-        popUp.classList.remove('open-modal')
-    })   
-})
-
-const formContent = document.getElementById('form__content');
-
-document.addEventListener('keydown', function(e) {
-	if( e.keyCode == 27 ){ 
-        popUp.classList.remove('open-modal')
-	}
-});
-
-popUp.addEventListener('click', (event) => {
-    const target = event.target;
-    if (target === popUp) {
-        popUp.classList.remove('open-modal')
-    }
-})
+/////////////////////// burger-menu END ////////////////////////////
 
 
-const cards = document.querySelectorAll('.first-screen__inner-wrapper-card');
+
+/////////////////////// first-screen cards START //////////////////
+
+const cards = document.querySelectorAll('.first-screen__card');
 
 cards.forEach((card) => {
     card.addEventListener('click', () => {
         let currentCard = card;
-        if(!currentCard.classList.contains('first-screen__inner-wrapper-card-active')) {
+        if(!currentCard.classList.contains('active')) {
                 cards.forEach((card) => {
-                    card.classList.remove('first-screen__inner-wrapper-card-active')
+                    card.classList.remove('active')
                 })
         }
-        currentCard.classList.add('first-screen__inner-wrapper-card-active')
+        currentCard.classList.add('active')
     });
    
 })
+
+/////////////////////// first-screen cards END ////////////////////
+
+
+
+//////////////////////////// tabs END /////////////////////////////
+
+const tabs = document.querySelectorAll('.tabs__item');
+const tabsButtons = document.querySelectorAll('.tabs__nav-btn');
+const tabsImages = document.querySelectorAll('.about-content-img')
+
+tabsButtons.forEach((currentButton) => {
+
+    const tabId = currentButton.getAttribute('data-tab');
+    const currentTab = document.querySelector(tabId);
+        
+    const tabImgId = currentButton.getAttribute('data-img');
+    const currentImg = document.querySelector(tabImgId);
+
+    currentButton.addEventListener('click', () => {
+        
+        if(!currentButton.classList.contains('active')) {
+            tabsButtons.forEach((btn) => {
+                btn.classList.remove('active')
+            });
+     
+            tabs.forEach((tab) => {
+                tab.classList.remove('active')
+            });
+
+            tabsImages.forEach((image) => {
+                image.classList.remove('active')
+            })
+     
+            currentButton.classList.add('active');
+            currentTab.classList.add('active');
+            currentImg.classList.add('active');
+
+        }
+    })
+});
+
+//////////////////////////// tabs END /////////////////////////////
+
+
+
+//////////////////////////// slider START /////////////////////////
+
+const slider = document.querySelector('.slider')
+const buttons = document.querySelectorAll('.slider__counter-button');
+const items = document.querySelectorAll('.slider__item');
+const sliderItemWidth = document.querySelector('.slider__item').offsetWidth;
+const sliderCounter = document.getElementById('slider__counter-text');
+const buttonSliderPrev = document.getElementById('slider__button-prev');
+const buttonSliderNext = document.getElementById('slider__button-next');
+const lastSlide = items.length;
+
+if (slider.clientWidth >= 1276) {
+    slidesToShow3 ();
+}
+
+if (slider.clientWidth < 1276) {
+    slidesToShow1 ();
+}
+
+// when showing 3 slides
+function slidesToShow3 () {
+    let currentSlide = 3;
+
+    buttons.forEach((button) => {
+        
+        const scrollingSlide = () => {
+            slider.scrollLeft += button.id === 'slider__button-prev' ? -sliderItemWidth * 3 : sliderItemWidth * 3;
+        }
+
+        button.addEventListener('click', scrollingSlide);
+    })
+
+    sliderCounter.innerText = `${currentSlide}  /  ${lastSlide}`;
+
+    buttonSliderPrev.addEventListener('click', () => {
+
+        if(currentSlide > 3) {
+            currentSlide = currentSlide - 3;
+            sliderCounter.innerText = `${currentSlide}  /  ${lastSlide}`;
+        }
+        checkButtons();
+    })
+
+    buttonSliderNext.addEventListener('click', () => {
+
+        if(currentSlide < items.length) {
+            currentSlide = currentSlide + 3;
+            sliderCounter.innerText = `${currentSlide}  /  ${lastSlide}`;
+        }
+
+        checkButtons();
+    })
+
+    const checkButtons = () => {
+        if (currentSlide === 3) {
+            buttonSliderPrev.style.opacity = 0.5;
+            buttonSliderPrev.style.cursor = 'default';
+        } else if (currentSlide > 3){
+            buttonSliderPrev.style.opacity = 1;
+            buttonSliderPrev.style.cursor = 'pointer';
+        } 
+        if (currentSlide === lastSlide) {
+            buttonSliderNext.style.opacity = 0.5;
+            buttonSliderNext.style.cursor = 'default';
+        } else if (currentSlide < lastSlide) {
+            buttonSliderNext.style.opacity = 1;
+            buttonSliderNext.style.cursor = 'pointer';
+        }
+    }
+};
+
+
+// when showing 1 slide
+
+function slidesToShow1 () {
+    let currentSlide = 1;
+
+    buttons.forEach((button) => {
+
+        const scrollingSlide = () => {
+            slider.scrollLeft += button.id === 'slider__button-prev' ? -sliderItemWidth  : sliderItemWidth;
+        }
+    
+        button.addEventListener('click', scrollingSlide);
+    })
+
+    sliderCounter.innerText = `${currentSlide}  /  ${lastSlide}`;
+
+    buttonSliderPrev.addEventListener('click', () => {
+
+        if(currentSlide > 1) {
+            currentSlide = --currentSlide;
+            sliderCounter.innerText = `${currentSlide}  /  ${lastSlide}`;
+        }
+
+        checkButtons()
+    })
+
+    buttonSliderNext.addEventListener('click', () => {
+
+        if(currentSlide < items.length) {
+            currentSlide = ++currentSlide;
+            sliderCounter.innerText = `${currentSlide}  /  ${lastSlide}`;
+        }
+
+        checkButtons()
+    })
+
+    const checkButtons = () => {
+        if (currentSlide === 1) {
+            buttonSliderPrev.style.opacity = 0.5;
+            buttonSliderPrev.style.cursor = 'default';
+        } else if (currentSlide > 1){
+            buttonSliderPrev.style.opacity = 1;
+            buttonSliderPrev.style.cursor = 'pointer';
+        }
+        if (currentSlide === lastSlide) {
+            buttonSliderNext.style.opacity = 0.5;
+            buttonSliderNext.style.cursor = 'default';
+        } else if (currentSlide < lastSlide) {
+            buttonSliderNext.style.opacity = 1;
+            buttonSliderNext.style.cursor = 'pointer';
+        } 
+    }
+};
+
+/////////////////////// slider END //////////////////////////
+
+
+
+/////////////////////// popup START /////////////////////////
+
+const popUp = document.getElementById('form-modal');
+const openPopUpButtons = document.querySelectorAll('.open__popup');
+const closePopUp = document.getElementById('close__popup');
+
+
+openPopUpButtons.forEach((button) => {
+
+    button.addEventListener('click', () => {
+        popUp.classList.add('open-modal');
+        body.classList.add('scroll-off-modal');
+    })
+    
+    closePopUp.addEventListener('click', () => {
+        popUp.classList.remove('open-modal');
+        body.classList.remove('scroll-off-modal');
+    })
+
+})
+
+const closeFromMissClick = (event) => {
+    const target = event.target;
+    if (target === popUp) {
+        popUp.classList.remove('open-modal');
+        body.classList.remove('scroll-off-modal');
+    }
+} 
+
+popUp.addEventListener('click', closeFromMissClick)
+
+document.addEventListener('keydown', (e) => {
+	if( e.keyCode === 27 ){ 
+        popUp.classList.remove('open-modal')
+	}
+});
+
+/////////////////////// popup END /////////////////////////
+
+
+
     
 
 
