@@ -91,64 +91,69 @@ const sliderCounter = document.getElementById('slider__counter-text');
 const buttonSliderPrev = document.getElementById('slider__button-prev');
 const buttonSliderNext = document.getElementById('slider__button-next');
 const lastSlide = items.length;
+let currentSlide = 1;
+let slidesToShow;
 
 if (slider.clientWidth >= 1276) {
-    slidesToShow3 ();
+    slidesToShow = 3;
+    slidesToScroll();
 };
 
 if (slider.clientWidth < 1276) {
-    slidesToShow1 ();
+    slidesToShow = 1;
+    slidesToScroll();
 };
 
-// when showing 3 slides
-function slidesToShow3 () {
-    let currentSlide = 3;
-    sliderCounter.innerText = `${currentSlide}  /  ${lastSlide}`;
-
-    const checkButtons = () => {
-        
-        if (currentSlide === 3) {
-            buttonSliderPrev.style.opacity = 0.5;
-            buttonSliderPrev.style.cursor = 'default';
-        } else if (currentSlide > 3){
-            buttonSliderPrev.style.opacity = 1;
-            buttonSliderPrev.style.cursor = 'pointer';
-        } 
+sliderCounter.innerText = `${currentSlide}  /  ${lastSlide / slidesToShow}`;
 
 
-        if (currentSlide === lastSlide) {
-            buttonSliderNext.style.opacity = 0.5;
-            buttonSliderNext.style.cursor = 'default';
-        } else if (currentSlide < lastSlide) {
-            buttonSliderNext.style.opacity = 1;
-            buttonSliderNext.style.cursor = 'pointer';
-        }
-    }
-
+function slidesToScroll() {
+    
     buttons.forEach((button) => {
         
         const scrollingSlide = () => {
-            slider.scrollLeft += button.id === 'slider__button-prev' ? -sliderItemWidth * 3 : sliderItemWidth * 3;
+            slider.scrollLeft += button.id === 'slider__button-prev' ? -sliderItemWidth * slidesToShow : sliderItemWidth * slidesToShow;
         }
 
         button.addEventListener('click', scrollingSlide);
     })
 
-    const changeCounterPrev = () => {
 
-        if(currentSlide > 3) {
-            currentSlide = currentSlide - 3;
-            sliderCounter.innerText = `${currentSlide}  /  ${lastSlide}`;
+    const checkButtons = () => {
+        
+        if (currentSlide === 1) {
+            buttonSliderPrev.style.opacity = 0.5;
+            buttonSliderPrev.style.cursor = 'default';
+        } else if (currentSlide > 1){
+            buttonSliderPrev.style.opacity = 1;
+            buttonSliderPrev.style.cursor = 'pointer';
+        } 
+
+
+        if (currentSlide === (lastSlide / slidesToShow)) {
+            buttonSliderNext.style.opacity = 0.5;
+            buttonSliderNext.style.cursor = 'default';
+        } else if (currentSlide < (lastSlide / slidesToShow)) {
+            buttonSliderNext.style.opacity = 1;
+            buttonSliderNext.style.cursor = 'pointer';
         }
+    }
 
+    const changeCounterPrev = () => {
+            
+        if(currentSlide > 1) {
+            currentSlide -= 1;
+            sliderCounter.innerText = `${currentSlide}  /  ${lastSlide / slidesToShow}`;
+        }
+        
         checkButtons();
     }
 
     const changeCounterNext = () => {
 
-        if(currentSlide < items.length) {
-            currentSlide = currentSlide + 3;
-            sliderCounter.innerText = `${currentSlide}  /  ${lastSlide}`;
+        if(currentSlide < (lastSlide / slidesToShow)) {
+            currentSlide += 1;
+            sliderCounter.innerText = `${currentSlide}  /  ${lastSlide / slidesToShow}`;
         }
 
         checkButtons();
@@ -158,62 +163,6 @@ function slidesToShow3 () {
     buttonSliderNext.addEventListener('click', changeCounterNext);
 
 }
-
-// when showing 1 slide
-function slidesToShow1 () {
-    let currentSlide = 1;
-    sliderCounter.innerText = `${currentSlide}  /  ${lastSlide}`;
-
-    const checkButtons = () => {
-        if (currentSlide === 1) {
-            buttonSliderPrev.style.opacity = 0.5;
-            buttonSliderPrev.style.cursor = 'default';
-        } else if (currentSlide > 1){
-            buttonSliderPrev.style.opacity = 1;
-            buttonSliderPrev.style.cursor = 'pointer';
-        }
-        if (currentSlide === lastSlide) {
-            buttonSliderNext.style.opacity = 0.5;
-            buttonSliderNext.style.cursor = 'default';
-        } else if (currentSlide < lastSlide) {
-            buttonSliderNext.style.opacity = 1;
-            buttonSliderNext.style.cursor = 'pointer';
-        } 
-    }
-
-    buttons.forEach((button) => {
-
-        const scrollingSlide = () => {
-            slider.scrollLeft += button.id === 'slider__button-prev' ? -sliderItemWidth  : sliderItemWidth;
-        }
-    
-        button.addEventListener('click', scrollingSlide);
-    })
-
-    const changeCounterPrev = () => {
-
-        if(currentSlide > 1) {
-            currentSlide = --currentSlide;
-            sliderCounter.innerText = `${currentSlide}  /  ${lastSlide}`;
-        }
-
-        checkButtons();
-    }
-
-    const changeCounterNext = () => {
-
-        if(currentSlide < items.length) {
-            currentSlide = ++currentSlide;
-            sliderCounter.innerText = `${currentSlide}  /  ${lastSlide}`;
-        }
-
-        checkButtons();
-    }
-
-    buttonSliderPrev.addEventListener('click', changeCounterPrev);
-    buttonSliderNext.addEventListener('click', changeCounterNext);
-
-};
 
 /////////////////////// slider END //////////////////////////
 
