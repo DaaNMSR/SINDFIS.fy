@@ -4,6 +4,8 @@ body {
     background: #F5F5F5;
 }
 
+/* header-footer styles and burger menu start */
+
 .header {
     display: flex;
     justify-content: center;
@@ -158,6 +160,9 @@ button:hover,
     padding-right: 32px;
 }
 
+/* header-footer styles and burger menu end */
+
+/* first-screen start */
 .first-screen {
     background: url('../images/first-screen.png');
     background-size: 100% 600px;
@@ -203,6 +208,7 @@ button:hover,
     cursor: default;
     opacity: 1;
 }
+
 .first-screen__card.active {
     background-color: #1FA8AD;
     color: #FFF;
@@ -232,6 +238,9 @@ button:hover,
     padding: 28px 20px 0 32px;
 }
 
+/* first-screen end */
+
+/* about start */
 .about-content {
     justify-content: center;
     min-height: 428px;
@@ -260,6 +269,10 @@ div.about-content.row > div {
 .about-content-img.active {
     display: block;
 }
+
+/* about end */
+
+/* tabs start */
 
 .tabs__content {
     padding-top: 25px;
@@ -308,6 +321,9 @@ div.about-content.row > div {
     animation: moving 1s ease;
 }
 
+/* tabs end */
+
+/* info start*/
 .info {
     display: flex;
     gap: 127px;
@@ -360,6 +376,9 @@ div.about-content.row > div {
     padding-bottom: 36px;
 }
 
+/* info end */
+
+/* slider start */
 .slider {
     display: grid;
     grid-auto-flow: column;
@@ -473,6 +492,9 @@ div.about-content.row > div {
     opacity: 50%;
 }
 
+/* slider end */
+
+/* form start */
 .form-content__h {
     font-weight: 800;
     font-size: calc(27px + 29 * (100vw / 2200));
@@ -584,7 +606,10 @@ div.about-content.row > div {
 
 }
 
-/* modal */
+/* form end */
+
+/* modal start */
+
 #form-modal {
     visibility: hidden;
     opacity: 0;
@@ -623,8 +648,13 @@ div.about-content.row > div {
     color: #1FA8AD;
 }
 
-/* modal end*/
+.popup__close:hover {
+    color:#000;
+}
 
+/* modal end */
+
+/* footer start */
 .footer {
     position: absolute;
     display: grid;
@@ -657,6 +687,9 @@ div.about-content.row > div {
     color: #FFF;
     opacity: 50%;
 }
+
+/* footer end */
+
 @media (max-width: 1400px) {
     .info,
     .info__topic {
