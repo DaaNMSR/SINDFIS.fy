@@ -84,10 +84,9 @@ tabsButtons.forEach((currentButton) => {
 //////////////////////////// slider START /////////////////////////
 
 const slider = document.querySelector('.slider');
-const buttons = document.querySelectorAll('.slider__counter-button');
+const buttons = document.querySelectorAll('.slider__button');
 const items = document.querySelectorAll('.slider__item');
 const sliderItemWidth = document.querySelector('.slider__item').offsetWidth;
-const sliderCounter = document.getElementById('slider__counter-text');
 const buttonSliderPrev = document.getElementById('slider__button-prev');
 const buttonSliderNext = document.getElementById('slider__button-next');
 const lastSlide = items.length;
@@ -104,8 +103,6 @@ if (slider.clientWidth < 1276) {
     slidesToScroll();
 };
 
-sliderCounter.innerText = `${currentSlide}  /  ${lastSlide / slidesToShow}`;
-
 
 function slidesToScroll() {
     
@@ -120,30 +117,26 @@ function slidesToScroll() {
 
 
     const checkButtons = () => {
-        
+
         if (currentSlide === 1) {
-            buttonSliderPrev.style.opacity = 0.5;
-            buttonSliderPrev.style.cursor = 'default';
+            buttonSliderPrev.disabled = true;
         } else if (currentSlide > 1){
-            buttonSliderPrev.style.opacity = 1;
-            buttonSliderPrev.style.cursor = 'pointer';
+            buttonSliderPrev.disabled = false;
         } 
 
 
         if (currentSlide === (lastSlide / slidesToShow)) {
-            buttonSliderNext.style.opacity = 0.5;
-            buttonSliderNext.style.cursor = 'default';
+            buttonSliderNext.disabled = true;
         } else if (currentSlide < (lastSlide / slidesToShow)) {
-            buttonSliderNext.style.opacity = 1;
-            buttonSliderNext.style.cursor = 'pointer';
+            buttonSliderNext.disabled = false;
         }
+
     }
 
     const changeCounterPrev = () => {
             
         if(currentSlide > 1) {
             currentSlide -= 1;
-            sliderCounter.innerText = `${currentSlide}  /  ${lastSlide / slidesToShow}`;
         }
         
         checkButtons();
@@ -153,7 +146,6 @@ function slidesToScroll() {
 
         if(currentSlide < (lastSlide / slidesToShow)) {
             currentSlide += 1;
-            sliderCounter.innerText = `${currentSlide}  /  ${lastSlide / slidesToShow}`;
         }
 
         checkButtons();

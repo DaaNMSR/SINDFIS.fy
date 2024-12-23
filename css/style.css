@@ -384,7 +384,6 @@ div.about-content.row > div {
     grid-auto-flow: column;
     grid-auto-columns: calc((100% / 3) - 16px);
     gap: 24px;
-    overflow: hidden;
     scroll-behavior: smooth;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -411,7 +410,7 @@ div.about-content.row > div {
     font-size: 15px;
     font-weight: 400;
     line-height: 19px;
-    opacity: 75%;
+    opacity: 0.75;
     margin: 24px 0 28px 0;
 }
 
@@ -435,15 +434,12 @@ div.about-content.row > div {
     padding: 40px 0 36px 25px;
 }
 
-.slider__counter {
+.slider__buttons {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 60px;
-    gap: 40px;
+    justify-content: space-between;
 }
 
-.slider__counter-button {
+.slider__button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -454,22 +450,15 @@ div.about-content.row > div {
     cursor: pointer;
 }
 
-#slider__counter-text {
-    font-size: 18px;
-    letter-spacing: 10px;
-}
-
 #slider__button-next {
     padding-right: 8px;
 }
 
 #slider__button-prev {
     padding-left: 8px;
-    opacity: 0.5;
-    cursor: default;
 }
 
-.slider__counter i {
+.slider__buttons i {
     border: 2px solid #FFF;
     border-width: 0 2px 2px 0;
     display: block;
@@ -483,13 +472,18 @@ div.about-content.row > div {
     transform: rotate(-45deg);
 }
 
+*:disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+
 @keyframes moving {
     from{transform: translateX(50px); opacity: 0;}
     to{transform: translateX(0); opacity: 1;}
 }
 
 .btn-opacity {
-    opacity: 50%;
+    opacity: 0.5;
 }
 
 /* slider end */
