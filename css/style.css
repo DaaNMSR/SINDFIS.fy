@@ -434,12 +434,8 @@ div.about-content.row > div {
     padding: 40px 0 36px 25px;
 }
 
-.slider__buttons {
-    display: flex;
-    justify-content: space-between;
-}
-
 .slider__button {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -450,15 +446,24 @@ div.about-content.row > div {
     cursor: pointer;
 }
 
+.slider__buttons {
+    position: relative;
+    top: -288px;
+    display: flex;
+    justify-content: space-between;
+}
+
 #slider__button-next {
+    left: 50px;
     padding-right: 8px;
 }
 
 #slider__button-prev {
+    right: 50px;
     padding-left: 8px;
 }
 
-.slider__buttons i {
+.slider__button i {
     border: 2px solid #FFF;
     border-width: 0 2px 2px 0;
     display: block;
@@ -703,6 +708,11 @@ div.about-content.row > div {
     .first-screen__item-h2 {
         font-size: 21px;
     }
+
+    .slider__buttons {
+        top: -250px;
+    }
+
 }
 
 @media (max-width: 1330px) {
@@ -775,6 +785,10 @@ div.about-content.row > div {
 @media (max-width: 640px) {
     .info__topic-img {
         width: 80vw;
+    }
+
+    .slider__button {
+        position: static;
     }
 
     #forms__checkbox,
