@@ -121,7 +121,7 @@ button:hover,
 }
 
 .header-menu__a,
-.footer-menu__a{
+.footer-menu__a {
     text-decoration: none;
     color: #FFF;
 }
@@ -195,7 +195,7 @@ button:hover,
 
 .first-screen__card {
     background-color: #FFF;
-    color:#000;
+    color: #000;
     min-height: 100%;
 }
 
@@ -246,7 +246,7 @@ button:hover,
     min-height: 428px;
 }
 
-div.about-content.row > div {
+div.about-content.row>div {
     display: flex;
     background-color: #FFF;
     align-items: center;
@@ -306,7 +306,7 @@ div.about-content.row > div {
     cursor: default;
     background-color: #1FA8AD;
     color: #FFF;
-    transition: color 0.3s ease-in-out,background-color 0.3s ease-in-out
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out
 }
 
 .tabs__nav-btn.active:hover {
@@ -368,8 +368,7 @@ div.about-content.row > div {
     min-width: 306px;
 }
 
-.info__first-card
-.info__second-card {
+.info__first-card .info__second-card {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -420,7 +419,7 @@ div.about-content.row > div {
     font-weight: 700;
     line-height: 16px;
     letter-spacing: 0.05em;
-}   
+}
 
 .slider__item-post {
     margin: 0;
@@ -463,12 +462,21 @@ div.about-content.row > div {
     padding-left: 8px;
 }
 
+#slider__button-prev:hover {
+    opacity: 0.5;
+}
+
+#slider__button-next:hover {
+    opacity: 0.5;
+}
+
 .slider__button i {
     border: 2px solid #FFF;
     border-width: 0 2px 2px 0;
     display: block;
     padding: 3px;
 }
+
 #slider__button-prev i {
     transform: rotate(135deg);
 }
@@ -483,8 +491,15 @@ div.about-content.row > div {
 }
 
 @keyframes moving {
-    from{transform: translateX(50px); opacity: 0;}
-    to{transform: translateX(0); opacity: 1;}
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .btn-opacity {
@@ -569,7 +584,7 @@ div.about-content.row > div {
     letter-spacing: 0.05em;
     background-color: #1FA8AD;
     color: #FFF;
-    padding: 20px 40px 20px 40px; 
+    padding: 20px 40px 20px 40px;
     margin: 36px auto 48px auto;
     border: none;
     cursor: pointer;
@@ -588,7 +603,7 @@ div.about-content.row > div {
     align-items: center;
     justify-content: center;
     background-position: center;
-    background-size:11px;
+    background-size: 11px;
     background-repeat: no-repeat;
 }
 
@@ -596,7 +611,7 @@ div.about-content.row > div {
 #forms__checkbox-modal:hover {
     background-color: #D3D0D0;
     background-image: url(../images/checkbox.png);
-}   
+}
 
 #forms__checkbox:checked,
 #forms__checkbox-modal:checked {
@@ -648,7 +663,7 @@ div.about-content.row > div {
 }
 
 .popup__close:hover {
-    color:#000;
+    color: #000;
 }
 
 /* modal end */
@@ -661,9 +676,9 @@ div.about-content.row > div {
     background-color: #1FA8AD;
     width: 100%;
     padding-top: 60px;
-    justify-content:center;
+    justify-content: center;
     margin-left: 0;
-} 
+}
 
 .footer-inner-wrapper {
     padding: 0;
@@ -690,6 +705,7 @@ div.about-content.row > div {
 /* footer end */
 
 @media (max-width: 1400px) {
+
     .info,
     .info__topic {
         display: grid;
@@ -767,16 +783,17 @@ div.about-content.row > div {
 }
 
 @media (max-width: 1200px) {
+
     .info__first,
     .info__second {
         gap: 60px;
     }
 
-    div.about-content.row > div {
+    div.about-content.row>div {
         display: grid;
     }
 
-    div.about-content.row > div > div:nth-child(2) {
+    div.about-content.row>div>div:nth-child(2) {
         display: flex;
         justify-content: center;
     }
@@ -802,7 +819,7 @@ div.about-content.row > div {
         justify-content: center;
     }
 
-    #forms-label, 
+    #forms-label,
     #forms-label-modal {
         font-size: 12px;
     }
@@ -830,7 +847,7 @@ div.about-content.row > div {
 }
 
 @media (max-width: 560px) {
-    .footer-inner-wrapper  {
+    .footer-inner-wrapper {
         flex-direction: column;
         align-items: center;
     }
@@ -845,4 +862,3 @@ div.about-content.row > div {
         margin: 0 0 24px 0;
     }
 }
-

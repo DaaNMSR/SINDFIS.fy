@@ -81,68 +81,53 @@ const lastSlide = items.length;
 let currentSlide = 1;
 let slidesToShow;
 
-const checkSlides = () => {
-    if (slider.clientWidth >= 1276) {
-        slidesToShow = 3;
-        slidesToScroll();
-    }
+const checkSlider = () => {
+    slider.clientWidth >= 1276 ? (slidesToShow = 3) : (slidesToShow = 1);
+};
 
-    if (slider.clientWidth < 1276) {
-        slidesToShow = 1;
-        slidesToScroll();
+checkSlider();
+
+// window.addEventListener("resize", checkSlider);
+
+buttons.forEach((button) => {
+    const scrollingSlide = () => {
+        slider.scrollLeft +=
+            button.id === "slider__button-prev"
+                ? -sliderItemWidth * slidesToShow
+                : sliderItemWidth * slidesToShow;
+    };
+
+    button.addEventListener("click", scrollingSlide);
+});
+
+const checkButtons = () => {
+    currentSlide === 1
+        ? (buttonSliderPrev.disabled = true)
+        : (buttonSliderPrev.disabled = false);
+
+    currentSlide === lastSlide / slidesToShow
+        ? (buttonSliderNext.disabled = true)
+        : (buttonSliderNext.disabled = false);
+};
+
+checkButtons();
+
+const changeCounterPrev = () => {
+    if (currentSlide > 1) {
+        currentSlide -= 1;
+        checkButtons();
     }
 };
 
-checkSlides();
-
-window.addEventListener("resize", checkSlides);
-
-function slidesToScroll() {
-    buttons.forEach((button) => {
-        const scrollingSlide = () => {
-            slider.scrollLeft +=
-                button.id === "slider__button-prev"
-                    ? -sliderItemWidth * slidesToShow
-                    : sliderItemWidth * slidesToShow;
-        };
-
-        button.addEventListener("click", scrollingSlide);
-    });
-
-    const checkButtons = () => {
-        if (currentSlide === 1) {
-            buttonSliderPrev.disabled = true;
-        } else if (currentSlide > 1) {
-            buttonSliderPrev.disabled = false;
-        }
-
-        if (currentSlide === lastSlide / slidesToShow) {
-            buttonSliderNext.disabled = true;
-        } else if (currentSlide < lastSlide / slidesToShow) {
-            buttonSliderNext.disabled = false;
-        }
-    };
-
-    const changeCounterPrev = () => {
-        if (currentSlide > 1) {
-            currentSlide -= 1;
-        }
-
+const changeCounterNext = () => {
+    if (currentSlide < lastSlide / slidesToShow) {
+        currentSlide += 1;
         checkButtons();
-    };
+    }
+};
 
-    const changeCounterNext = () => {
-        if (currentSlide < lastSlide / slidesToShow) {
-            currentSlide += 1;
-        }
-
-        checkButtons();
-    };
-
-    buttonSliderPrev.addEventListener("click", changeCounterPrev);
-    buttonSliderNext.addEventListener("click", changeCounterNext);
-}
-
+buttonSliderPrev.addEventListener("click", changeCounterPrev);
+buttonSliderNext.addEventListener("click", changeCounterNext);
 /////////////////////// slider END //////////////////////////
 
 /////////////////////// popup START /////////////////////////
