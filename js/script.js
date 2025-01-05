@@ -1,8 +1,8 @@
 /////////////////////// burger-menu START //////////////////////////
 
-const headerContent = document.getElementById("header-content");
+const headerContent = document.getElementById("header__content");
 const burgerButton = document.getElementById("burger");
-const body = document.getElementById("body");
+const body = document.body;
 
 const openAndCloseBurgerMenu = () => {
   headerContent.classList.toggle("open");
@@ -11,6 +11,12 @@ const openAndCloseBurgerMenu = () => {
 };
 
 burgerButton.addEventListener("click", openAndCloseBurgerMenu);
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && headerContent.classList.contains("open")) {
+    openAndCloseBurgerMenu();
+  }
+});
 
 /////////////////////// burger-menu END ////////////////////////////
 
@@ -36,7 +42,7 @@ cards.forEach((card) => {
 
 const tabs = document.querySelectorAll(".tabs__item");
 const tabsButtons = document.querySelectorAll(".tabs__nav-btn");
-const tabsImages = document.querySelectorAll(".about-content-img");
+const tabsImages = document.querySelectorAll(".tabs__image");
 
 tabsButtons.forEach((currentButton) => {
   const tabId = currentButton.getAttribute("data-tab");
@@ -74,10 +80,10 @@ tabsButtons.forEach((currentButton) => {
 const slider = document.querySelector(".slider");
 const buttons = document.querySelectorAll(".slider__button");
 const items = document.querySelectorAll(".slider__item");
-let sliderItemWidth = document.querySelector(".slider__item").offsetWidth;
 const buttonSliderPrev = document.getElementById("slider__button-prev");
 const buttonSliderNext = document.getElementById("slider__button-next");
 const lastSlide = items.length;
+let sliderItemWidth = document.querySelector(".slider__item").offsetWidth;
 let currentSlide = 1;
 let slidesToShow;
 
@@ -142,30 +148,21 @@ openPopUpButtons.forEach((button) => {
     popUp.classList.add("open-modal");
     body.classList.add("scroll-off-modal");
   });
-
-  closePopUpButton.addEventListener("click", () => {
-    popUp.classList.remove("open-modal");
-    body.classList.remove("scroll-off-modal");
-  });
 });
 
-const closePopUpOutClick = (e) => {
-  const target = e.target;
+closePopUpButton.addEventListener("click", () => {
+  popUp.classList.remove("open-modal");
+  body.classList.remove("scroll-off-modal");
+});
 
-  if (target === popUp) {
+const closePopUp = (event) => {
+  if (event.target === popUp || event.keyCode === 27) {
     popUp.classList.remove("open-modal");
     body.classList.remove("scroll-off-modal");
   }
 };
 
-const closePopUpEsc = (e) => {
-  if (e.keyCode === 27) {
-    popUp.classList.remove("open-modal");
-    body.classList.remove("scroll-off-modal");
-  }
-};
-
-popUp.addEventListener("click", closePopUpOutClick);
-document.addEventListener("keydown", closePopUpEsc);
+popUp.addEventListener("click", closePopUp);
+document.addEventListener("keydown", closePopUp);
 
 /////////////////////// popup END /////////////////////////

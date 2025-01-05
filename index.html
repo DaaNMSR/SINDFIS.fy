@@ -1,764 +1,670 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>SINDNFIS</title>
-        <link rel="stylesheet" href="./css/font.css" />
-        <link rel="stylesheet" href="./css/bootstrap-grid.css" />
-        <link rel="stylesheet" href="./css/style.css" />
-    </head>
-    <body id="body">
-        <header class="header">
-            <div class="header-inner-wrapper">
-                <button id="burger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <a href="#" class="header-inner-wrapper__a">
-                    <img
-                        class="header-inner-wrapper__image"
-                        src="./images/logo.png"
-                        alt="SINDNFIS"
-                    />
-                </a>
-                <div id="header-content">
-                    <ul class="header-menu">
-                        <li class="header-menu__list">
-                            <a class="header-menu__a" href="#"
-                                >Сопровождение бизнеса</a
-                            >
-                        </li>
-                        <li class="header-menu__list">
-                            <a class="header-menu__a" href="#"
-                                >Дист. обучение</a
-                            >
-                        </li>
-                        <li class="header-menu__list">
-                            <a class="header-menu__a" href="#"
-                                >Лицензирование</a
-                            >
-                        </li>
-                        <li class="header-menu__list">
-                            <a class="header-menu__a" href="#">О нас</a>
-                        </li>
-                        <li class="header-menu__list">
-                            <a class="header-menu__a" href="#">Контакты</a>
-                        </li>
-                    </ul>
-                    <div class="header-inner-wrapper__right">
-                        <a
-                            href="https://vk.com/daannnn"
-                            class="header-inner-wrapper__right-a"
-                        >
-                            <img
-                                src="images/vk.png"
-                                class="header-inner-wrapper__right-image"
-                                alt="vk"
-                            />
-                        </a>
-                        <a
-                            href="mailto:denispresent4@gmail.com"
-                            class="header-inner-wrapper__right-a"
-                        >
-                            <img
-                                src="images/mail.png"
-                                class="header-inner-wrapper__right-image"
-                                alt="mail"
-                            />
-                        </a>
-                    </div>
-                    <button class="header-inner-wrapper__button open__popup">
-                        ЗАКАЗАТЬ ЗВОНОК
-                    </button>
-                </div>
-            </div>
-        </header>
-        <div class="first-screen">
-            <div class="container">
-                <h1 class="first-screen__h1 col-6">
-                    Консалтинговая компания Эксперт-Рос инвест
-                </h1>
-                <div class="first-screen__inner-wrapper row">
-                    <div class="col-xl-4 col-lg-12">
-                        <div class="first-screen__card active">
-                            <div class="first-screen__card-item">
-                                <img
-                                    src="./images/service-item-first.png"
-                                    class="first-screen__item-image"
-                                    alt="service"
-                                />
-                                <h2
-                                    class="first-screen__item-h2 first-screen__item-h2-1"
-                                >
-                                    Сопровождение<br />бизнеса
-                                </h2>
-                            </div>
-                            <p class="first-screen__card-p">
-                                Aliquet ac leo arcu erat id sit rhoncus lectus.
-                                Donec pretium cursus pretium scelerisque quis
-                                posuere sed aliquet. Nibh convallis mi sodales
-                                pretium adipiscing ac. Turpis vitae augue.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-12">
-                        <div class="first-screen__card">
-                            <div class="first-screen__card-item">
-                                <img
-                                    src="./images/service-item-second.png"
-                                    class="first-screen__item-image"
-                                    alt="service"
-                                />
-                                <h2 class="first-screen__item-h2">
-                                    Дистанционное<br />обучение
-                                </h2>
-                            </div>
-                            <p class="first-screen__card-p">
-                                Enim urna ac nunc consectetur sed donec.
-                                Facilisis bibendum suspendisse at pretium amet.
-                                Egestas a ultrices odio dignissim varius. Ipsum
-                                egestas nisl.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-12">
-                        <div class="first-screen__card">
-                            <div class="first-screen__card-item">
-                                <img
-                                    src="./images/service-item-second.png"
-                                    class="first-screen__item-image"
-                                    alt="service"
-                                />
-                                <h2 class="first-screen__item-h2">
-                                    Лицензирование<br />компаний
-                                </h2>
-                            </div>
-                            <p class="first-screen__card-p">
-                                Urna arcu suspendisse nibh volutpat. Felis diam
-                                odio vitae sit. Eget purus sed tincidunt tortor
-                                at. Viverra adipiscing vitae iaculis sapien amet
-                                sit morbi tincidunt adipiscing. Sagittis eget.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SINDNFIS</title>
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper">
+        <button id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <a href="#" class="header__logo-link">
+          <img class="header__logo" src="./images/logo.png" alt="SINDNFIS" />
+        </a>
+        <div id="header__content">
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">Сопровождение бизнеса</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">Дист. обучение</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">Лицензирование</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">О нас</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <div class="header__contacts">
+            <a href="https://vk.com/daannnn">
+              <img
+                src="images/vk.png"
+                class="header__contacts-image"
+                alt="vk"
+              />
+            </a>
+            <a href="mailto:denispresent4@gmail.com">
+              <img
+                src="images/mail.png"
+                class="header__contacts-image"
+                alt="mail"
+              />
+            </a>
+          </div>
+          <button class="header__button open__popup">ЗАКАЗАТЬ ЗВОНОК</button>
         </div>
-        <div class="container">
-            <div class="about">
-                <h1 class="about-h1">О компании</h1>
-                <div class="about__topic">
-                    <p class="about-p col-xl-8">
-                        Aliquam augue enim phasellus egestas nisl urna senectus
-                        ultricies. Vitae consequat odio faucibus eget
-                        suspendisse ultricies. Pharetra diam viverra ut
-                        adipiscing aliquam. Massa nulla lobortis nulla tellus ut
-                        ut elementum. Viverra fermentum adipiscing cras purus a.
-                        Vitae pretium lacus faucibus rhoncus nisi neque.
-                        Sagittis odio egestas suspendisse sed imperdiet urna.
-                    </p>
-                </div>
-                <div class="tabs">
-                    <div class="tabs-nav row">
-                        <button
-                            class="tabs__nav-btn active"
-                            type="button"
-                            data-tab="#tab_1"
-                            data-img="#tab__img-1"
-                        >
-                            Команда
-                        </button>
-                        <button
-                            class="tabs__nav-btn"
-                            type="button"
-                            data-tab="#tab_2"
-                            data-img="#tab__img-2"
-                        >
-                            Наши компетенции
-                        </button>
-                        <button
-                            class="tabs__nav-btn"
-                            type="button"
-                            data-tab="#tab_3"
-                            data-img="#tab__img-3"
-                        >
-                            Профессионалы
-                        </button>
-                        <button
-                            class="tabs__nav-btn"
-                            type="button"
-                            data-tab="#tab_4"
-                            data-img="#tab__img-4"
-                        >
-                            Взаимодействие с органами
-                        </button>
-                    </div>
-                    <div class="about-content row">
-                        <div class="col-xl-10">
-                            <div class="tabs__content col-xl-5 col-sm-12">
-                                <div class="tabs__item active" id="tab_1">
-                                    Fringilla dignissim lectus velit amet nisi
-                                    erat sit. Nisi facilisi pretium pharetra
-                                    amet a mauris amet amet ut. Odio tellus et
-                                    in imperdiet pellentesque id. Scelerisque et
-                                    a proin nisi. Ut interdum lobortis porta
-                                    enim viverra eleifend sodales mollis.
-                                    Gravida in senectus lacinia eget nec. Mauris
-                                    eu sed et quisque dignissim. Odio sed eget
-                                    id vitae sollicitudin sodales augue egestas.
-                                    Sapien elementum nisi est ornare aliquam
-                                    viverra nibh amet donec.
-                                </div>
-                                <div class="tabs__item" id="tab_2">
-                                    Lorem Ipsum is simply dummy text of the
-                                    printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy
-                                    text ever since the 1500s, when an unknown
-                                    printer took a galley of type and scrambled
-                                    it to make a type specimen book. It has
-                                    survived not only five centuries, but also
-                                    the leap into electronic typesetting,
-                                    remaining essentially unchanged. It was
-                                    popularised in the 1960s with the release of
-                                    Letraset sheets containing Lorem Ipsum
-                                    passages, and more recently with desktop
-                                    publishing software like Aldus PageMaker
-                                    including versions of Lorem Ipsum.
-                                </div>
-                                <div class="tabs__item" id="tab_3">
-                                    The standard chunk of Lorem Ipsum used since
-                                    the 1500s is reproduced below for those
-                                    interested. Sections 1.10.32 and 1.10.33
-                                    from "de Finibus Bonorum et Malorum" by
-                                    Cicero are also reproduced in their exact
-                                    original form, accompanied by English
-                                    versions from the 1914 translation by H.
-                                    Rackham.
-                                </div>
-                                <div class="tabs__item" id="tab_4">
-                                    Contrary to popular belief, Lorem Ipsum is
-                                    not simply random text. It has roots in a
-                                    piece of classical Latin literature from 45
-                                    BC, making it over 2000 years old. Richard
-                                    McClintock, a Latin professor at
-                                    Hampden-Sydney College in Virginia, looked
-                                    up one of the more obscure Latin words,
-                                    consectetur, from a Lorem Ipsum passage, and
-                                    going through the cites of the word in
-                                    classical literature, discovered the
-                                    undoubtable source.
-                                </div>
-                            </div>
-                            <div class="col-xl-5 col-sm-12">
-                                <img
-                                    src="./images/tab-1.png"
-                                    class="about-content-img active"
-                                    id="tab__img-1"
-                                    alt="tab"
-                                />
-                                <img
-                                    src="./images/tab-2.jpg"
-                                    class="about-content-img"
-                                    id="tab__img-2"
-                                    alt="tab"
-                                />
-                                <img
-                                    src="./images/tab-3.jpg"
-                                    class="about-content-img"
-                                    id="tab__img-3"
-                                    alt="tab"
-                                />
-                                <img
-                                    src="./images/tab-4.jpg"
-                                    class="about-content-img"
-                                    id="tab__img-4"
-                                    alt="tab"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <h1 class="info-h1">Почему мы?</h1>
-            <div class="info">
-                <div class="info__content">
-                    <div class="info__first row">
-                        <div class="info__first-card col-xl-3">
-                            <img src="./images/target-img.png" alt="target" />
-                            <p class="info__p">
-                                Достижение поставленных клиентом целей
-                            </p>
-                        </div>
-                        <div class="info__first-card col-xl-3">
-                            <img src="./images/target-img.png" alt="target" />
-                            <p class="info__p">
-                                Нацелены на долгосрочное сотрудничество
-                            </p>
-                        </div>
-                    </div>
-                    <div class="info__second row">
-                        <div class="info__second-card col-xl-3">
-                            <img src="./images/target-img.png" alt="target" />
-                            <p class="info__p">Лояльная ценовая политика</p>
-                        </div>
-                        <div class="info__second-card col-xl-3">
-                            <img src="./images/target-img.png" alt="target" />
-                            <p class="info__p">
-                                Всегда готовы идти навстречу клиенту
-                            </p>
-                        </div>
-                    </div>
-                    <div class="info__third row">
-                        <div class="info__third-card col-xl-3">
-                            <img src="./images/target-img.png" alt="target" />
-                            <p class="info__p">
-                                Высокая квалификация и практический опыт
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="info__topic col-xl-4">
-                    <p class="info__topic-p">
-                        Non diam laoreet faucibus amet ut lacus sed convallis
-                        viverra. At purus mattis in consectetur vel.
-                    </p>
-                    <img
-                        src="./images/logo-big.png"
-                        class="info__topic-img"
-                        alt="target-topic"
-                    />
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <h1 class="review-h1">Отзывы о нашей работе</h1>
-            <div class="slider">
-                <div class="slider__item">
-                    <img
-                        src="./images/review-logo1.png"
-                        class="slider__img"
-                        alt="slide"
-                    />
-                    <div class="slider__item-content">
-                        <h4 class="slider__item-h">
-                            Blandit placerat eget ultrices gravida
-                        </h4>
-                        <p class="slider__item-text">
-                            Nisl id blandit pharetra sodales vel diam vitae.
-                            Aliquet pulvinar nunc nam faucibus pellentesque
-                            etiam et. Ac iaculis velit amet pulvinar iaculis
-                            purus sociis in elementum. Eu ut magna tellus ipsum
-                            nibh volutpat aliquam at. Tempor sed habitant lectus
-                            quam tristique. Condimentum tortor massa est in eu
-                            enim. Metus nullam egestas eget libero vel. Amet
-                            nulla egestas et ipsum. met eu ac amet non aliquam
-                            et amet. Quis a auctor ut cras suspendisse in sem
-                            elementum nisl. Eu aliquet lobortis.
-                        </p>
-                        <p class="slider__item-name">ИВАНОВ ИВАН</p>
-                        <p class="slider__item-post">Коммерческий директор</p>
-                    </div>
-                </div>
-                <div class="slider__item">
-                    <img
-                        src="./images/review-logo2.png"
-                        class="slider__img"
-                        alt="slide"
-                    />
-                    <div class="slider__item-content">
-                        <h4 class="slider__item-h">
-                            Platea libero netus vel mauris massa
-                        </h4>
-                        <p class="slider__item-text">
-                            Ultrices enim vitae dignissim pharetra at. In id
-                            enim vulputate massa massa. Nisl quis purus amet
-                            mauris egestas porta non. Eget platea pharetra at
-                            leo faucibus nibh ipsum convallis euismod. Non quam
-                            turpis massa et cras facilisis ut blandit in.
-                            Faucibus sed in pellentesque morbi adipiscing proin
-                            consequat viverra vitae. Molestie pulvinar facilisi
-                            lorem pharetra. In turpis lectus non fermentum
-                            scelerisque lectus montes massa leo. Lectus in non
-                            tortor cursus. Ultrices sollicitudin cursus
-                            dictumst.
-                        </p>
-                        <p class="slider__item-name">ИВАНОВ ИВАН</p>
-                        <p class="slider__item-post">Коммерческий директор</p>
-                    </div>
-                </div>
-                <div class="slider__item">
-                    <img
-                        src="./images/review-logo3.png"
-                        class="slider__img"
-                        alt="slide"
-                    />
-                    <div class="slider__item-content">
-                        <h4 class="slider__item-h">
-                            Sequi eveniet repudiandae dicta eius
-                        </h4>
-                        <p class="slider__item-text">
-                            Nam nunc suspendisse felis augue non pellentesque.
-                            Ut nam neque ornare pretium sodales feugiat gravida.
-                            Eleifend ut erat ornare ac. Non orci mi eu quam
-                            varius commodo mi blandit. Risus nec et amet
-                            tincidunt viverra sagittis nunc non. Lectus aliquet
-                            tempor pulvinar scelerisque odio condimentum at.
-                            Pharetra dolor elit eu aliquam tincidunt ipsum felis
-                            viverra. Enim dolor tellus.
-                        </p>
-                        <p class="slider__item-name">ИВАНОВ ИВАН</p>
-                        <p class="slider__item-post">Коммерческий директор</p>
-                    </div>
-                </div>
-                <div class="slider__item">
-                    <img
-                        src="./images/review-logo4.png"
-                        class="slider__img"
-                        alt="slide"
-                    />
-                    <div class="slider__item-content">
-                        <h4 class="slider__item-h">
-                            There are many variations of passages
-                        </h4>
-                        <p class="slider__item-text">
-                            There are many variations of passages of Lorem Ipsum
-                            available, but the majority have suffered alteration
-                            in some form, by injected humour, or randomised
-                            words which don't look even slightly believable. If
-                            you are going to use a passage of Lorem Ipsum, you
-                            need to be sure there isn't anything embarrassing
-                            hidden in the middle of text. All the Lorem Ipsum
-                            generators on the Internet tend.
-                        </p>
-                        <p class="slider__item-name">ИВАНОВ ИВАН</p>
-                        <p class="slider__item-post">Коммерческий директор</p>
-                    </div>
-                </div>
-                <div class="slider__item">
-                    <img
-                        src="./images/review-logo5.png"
-                        class="slider__img"
-                        alt="slide"
-                    />
-                    <div class="slider__item-content">
-                        <h4 class="slider__item-h">
-                            Morbi egestas non purus sit amet consectetur
-                        </h4>
-                        <p class="slider__item-text">
-                            Curabitur nec nulla vitae erat posuere eleifend vel
-                            sit amet urna. Pellentesque ornare nunc bibendum ex
-                            feugiat vehicula. Nullam mattis mauris eget mi
-                            venenatis tristique. Morbi egestas non purus sit
-                            amet consectetur. Nam lectus lectus, accumsan non
-                            tortor et, tempus volutpat erat. Phasellus at ipsum
-                            a ante rutrum congue bibendum in massa. Vivamus
-                            efficitur convallis tempor.Nullam mattis mauris eget
-                            mi venenatis tristique.
-                        </p>
-                        <p class="slider__item-name">ИВАНОВ ИВАН</p>
-                        <p class="slider__item-post">Коммерческий директор</p>
-                    </div>
-                </div>
-                <div class="slider__item">
-                    <img
-                        src="./images/review-logo6.png"
-                        class="slider__img"
-                        alt="slide"
-                    />
-                    <div class="slider__item-content">
-                        <h4 class="slider__item-h">
-                            Nunc hendrerit est ut massa semper
-                        </h4>
-                        <p class="slider__item-text">
-                            Aenean commodo dolor eu erat porta, nec interdum
-                            neque ornare. Praesent laoreet, sapien eu
-                            condimentum pellentesque, diam orci vehicula massa,
-                            id scelerisque odio sem id est. Nunc eleifend elit
-                            et sodales interdum. Suspendisse a tempus quam. Nunc
-                            hendrerit est ut massa semper, vel pulvinar lectus
-                            placerat. Sed eu augue vitae metus fringilla
-                            tristique. Ut sit amet imperdiet odio. Nunc eleifend
-                            elit et sodales interdum. Suspendisse a tempus quam.
-                        </p>
-                        <p class="slider__item-name">ИВАНОВ ИВАН</p>
-                        <p class="slider__item-post">Коммерческий директор</p>
-                    </div>
-                </div>
-                <div class="slider__item">
-                    <img
-                        src="./images/review-logo7.png"
-                        class="slider__img"
-                        alt="slide"
-                    />
-                    <div class="slider__item-content">
-                        <h4 class="slider__item-h">
-                            Vestibulum ante ipsum primis in faucibus orci
-                        </h4>
-                        <p class="slider__item-text">
-                            Etiam interdum nibh lectus, a egestas velit accumsan
-                            vel. Vivamus id ante eget mi semper imperdiet sed ut
-                            urna. Vestibulum pharetra dignissim metus, vel
-                            lobortis purus pretium sollicitudin. Cras
-                            consectetur libero nec libero feugiat vestibulum. Ut
-                            efficitur feugiat lectus quis iaculis. Lorem ipsum
-                            dolor sit amet, consectetur adipiscing elit. Morbi
-                            volutpat mauris erat, vel tristique sapien
-                            vestibulum quis.
-                        </p>
-                        <p class="slider__item-name">ИВАНОВ ИВАН</p>
-                        <p class="slider__item-post">Коммерческий директор</p>
-                    </div>
-                </div>
-                <div class="slider__item">
-                    <img
-                        src="./images/review-logo8.png"
-                        class="slider__img"
-                        alt="slide"
-                    />
-                    <div class="slider__item-content">
-                        <h4 class="slider__item-h">
-                            Maecenas facilisis ipsum nec augue pulvinar
-                        </h4>
-                        <p class="slider__item-text">
-                            Quisque consectetur a magna at egestas. Suspendisse
-                            facilisis mauris ac augue faucibus, vel pretium nisi
-                            blandit. Vestibulum blandit massa sed volutpat
-                            euismod. Vivamus a massa nibh. Vestibulum a molestie
-                            orci. Maecenas facilisis ipsum nec augue pulvinar
-                            congue. Donec scelerisque elit eu neque dapibus, at
-                            iaculis urna iaculis. Nullam semper, velit sed
-                            ultricies scelerisque, nec sagittis lectus urna ac
-                            augue.
-                        </p>
-                        <p class="slider__item-name">ИВАНОВ ИВАН</p>
-                        <p class="slider__item-post">Коммерческий директор</p>
-                    </div>
-                </div>
-                <div class="slider__item">
-                    <img
-                        src="./images/review-logo9.png"
-                        class="slider__img"
-                        alt="slide"
-                    />
-                    <div class="slider__item-content">
-                        <h4 class="slider__item-h">
-                            Donec nec urna eget est suscipit feugiat accumsan
-                            metus
-                        </h4>
-                        <p class="slider__item-text">
-                            Integer sagittis mollis ligula. Pellentesque
-                            efficitur, ante elementum interdum condimentum, nibh
-                            urna sodales libero, ac sodales velit sem ac justo.
-                            Donec nec urna eget est suscipit feugiat. Nunc et
-                            tellus libero. Nam semper egestas tortor, et rutrum
-                            enim consectetur ac. Morbi justo metus euismod sit
-                            amet dapibus malesuada, accumsan ut velit.Nam semper
-                            egestas tortor.Morbi justo metus euismod sit amet
-                            dapibus malesuada, accumsan ut velit.
-                        </p>
-                        <p class="slider__item-name">ИВАНОВ ИВАН</p>
-                        <p class="slider__item-post">Коммерческий директор</p>
-                    </div>
-                </div>
-            </div>
-            <div class="slider__buttons">
-                <button class="slider__button" id="slider__button-prev">
-                    <i></i>
-                </button>
-                <button class="slider__button" id="slider__button-next">
-                    <i></i>
-                </button>
-            </div>
-        </div>
-        <div class="container">
-            <div class="form-content row">
-                <h2 class="form-content__h col-xl-6">
-                    <span class="form-content__span">50+</span>
-                    <span>компаний доверяют нам. Присоединяйтесь!</span>
+      </div>
+    </header>
+    <div class="first-screen">
+      <div class="container">
+        <h1 class="first-screen__title col-6">
+          Консалтинговая компания Эксперт-Рос инвест
+        </h1>
+        <div class="first-screen__wrapper row">
+          <div class="col-xl-4 col-lg-12">
+            <div class="first-screen__card active">
+              <div class="first-screen__card-content">
+                <img
+                  src="./images/service-item-first.png"
+                  class="first-screen__card-image"
+                  alt="service"
+                />
+                <h2 class="first-screen__card-title">
+                  Сопровождение<br />бизнеса
                 </h2>
-                <div class="form col-xl-5 col-m-10 col-sm-12">
-                    <h5 class="form__h">
-                        <span class="form-content__span">Бесплатный</span
-                        ><br />аудит документации
-                    </h5>
-                    <form
-                        class="forms"
-                        action="https://api.web3forms.com/submit"
-                        method="POST"
-                    >
-                        <input
-                            type="hidden"
-                            name="access_key"
-                            value="03fc5892-27b4-4b74-a685-982941c651cc"
-                        />
-                        <input
-                            type="text"
-                            name="name"
-                            id="input-name"
-                            class="form-input"
-                            required
-                            placeholder="Имя"
-                        />
-                        <input
-                            type="email"
-                            name="email"
-                            id="input-email"
-                            class="form-input"
-                            placeholder="E-mail"
-                        />
-                        <input
-                            type="tel"
-                            name="tel"
-                            id="input-tel"
-                            class="form-input"
-                            required
-                            placeholder="Телефон"
-                        />
-                        <div class="forms__checkbox">
-                            <input
-                                type="checkbox"
-                                id="forms__checkbox"
-                                required
-                            />
-                            <label for="forms__checkbox" id="forms-label"
-                                >Согласие на обработку персональных
-                                данных</label
-                            >
-                        </div>
-                        <input
-                            type="submit"
-                            value="ОТПРАВИТЬ"
-                            class="forms__submit"
-                        />
-                    </form>
-                </div>
+              </div>
+              <p class="first-screen__card-text">
+                Aliquet ac leo arcu erat id sit rhoncus lectus. Donec pretium
+                cursus pretium scelerisque quis posuere sed aliquet. Nibh
+                convallis mi sodales pretium adipiscing ac. Turpis vitae augue.
+              </p>
             </div>
+          </div>
+          <div class="col-xl-4 col-lg-12">
+            <div class="first-screen__card">
+              <div class="first-screen__card-content">
+                <img
+                  src="./images/service-item-second.png"
+                  class="first-screen__card-image"
+                  alt="service"
+                />
+                <h2 class="first-screen__card-title">
+                  Дистанционное<br />обучение
+                </h2>
+              </div>
+              <p class="first-screen__card-text">
+                Enim urna ac nunc consectetur sed donec. Facilisis bibendum
+                suspendisse at pretium amet. Egestas a ultrices odio dignissim
+                varius. Ipsum egestas nisl.
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-12">
+            <div class="first-screen__card">
+              <div class="first-screen__card-content">
+                <img
+                  src="./images/service-item-second.png"
+                  class="first-screen__card-image"
+                  alt="service"
+                />
+                <h2 class="first-screen__card-title">
+                  Лицензирование<br />компаний
+                </h2>
+              </div>
+              <p class="first-screen__card-text">
+                Urna arcu suspendisse nibh volutpat. Felis diam odio vitae sit.
+                Eget purus sed tincidunt tortor at. Viverra adipiscing vitae
+                iaculis sapien amet sit morbi tincidunt adipiscing. Sagittis
+                eget.
+              </p>
+            </div>
+          </div>
         </div>
-        <footer class="footer">
-            <div class="footer-inner-wrapper">
-                <a href="#" class="footer-inner-wrapper__a">
-                    <img
-                        class="footer-inner-wrapper__image"
-                        src="./images/logo.png"
-                        alt="logo"
-                    />
-                </a>
-                <div id="footer-content">
-                    <ul class="footer-menu">
-                        <li class="footer-menu__list">
-                            <a class="footer-menu__a" href="#"
-                                >Сопровождение бизнеса</a
-                            >
-                        </li>
-                        <li class="footer-menu__list">
-                            <a class="footer-menu__a" href="#"
-                                >Дист. обучение</a
-                            >
-                        </li>
-                        <li class="footer-menu__list">
-                            <a class="footer-menu__a" href="#"
-                                >Лицензирование</a
-                            >
-                        </li>
-                        <li class="footer-menu__list">
-                            <a class="footer-menu__a" href="#">О нас</a>
-                        </li>
-                        <li class="footer-menu__list">
-                            <a class="footer-menu__a" href="#">Контакты</a>
-                        </li>
-                    </ul>
-                    <div class="footer-inner-wrapper__right">
-                        <a
-                            href="https://vk.com/daannnn"
-                            class="footer-inner-wrapper__right-a"
-                        >
-                            <img
-                                src="./images/vk.png"
-                                class="footer-inner-wrapper__right-image"
-                                alt="vk"
-                            />
-                        </a>
-                        <a
-                            href="mailto:denispresent4@gmail.com"
-                            class="footer-inner-wrapper__right-a"
-                        >
-                            <img
-                                src="./images/mail.png"
-                                class="footer-inner-wrapper__right-image"
-                                alt="mail"
-                            />
-                        </a>
-                    </div>
-                    <button class="footer-inner-wrapper__button open__popup">
-                        ЗАКАЗАТЬ ЗВОНОК
-                    </button>
-                </div>
-            </div>
-            <div class="footer__copyright">
-                <p class="footer__copyright-p">
-                    © СЕВЕРО-ЗАПАДНЫЙ ЮРИДИЧЕСКИЙ ЦЕНТР "АЛЬЯНС" . 2023 г.
-                </p>
-            </div>
-        </footer>
-        <div class="form col-12" id="form-modal">
-            <div
-                class="form__content col-xl-6 col-md-6 col-sm-12"
-                id="form__content"
+      </div>
+    </div>
+    <div class="container">
+      <div class="about">
+        <h1 class="about__title">О компании</h1>
+        <div class="about__topic">
+          <p class="about__text col-xl-8">
+            Aliquam augue enim phasellus egestas nisl urna senectus ultricies.
+            Vitae consequat odio faucibus eget suspendisse ultricies. Pharetra
+            diam viverra ut adipiscing aliquam. Massa nulla lobortis nulla
+            tellus ut ut elementum. Viverra fermentum adipiscing cras purus a.
+            Vitae pretium lacus faucibus rhoncus nisi neque. Sagittis odio
+            egestas suspendisse sed imperdiet urna.
+          </p>
+        </div>
+        <div class="tabs">
+          <div class="tabs__nav row">
+            <button
+              class="tabs__nav-btn active"
+              type="button"
+              data-tab="#tab_1"
+              data-img="#tab__img-1"
             >
-                <h5 class="form__h form__content_h">
-                    <span class="form-content__span">ЗАКАЗАТЬ</span><br />ЗВОНОК
-                </h5>
-                <form
-                    class="forms"
-                    action="https://api.web3forms.com/submit"
-                    method="POST"
-                >
-                    <input
-                        type="hidden"
-                        name="access_key"
-                        value="03fc5892-27b4-4b74-a685-982941c651cc"
-                    />
-                    <input
-                        type="text"
-                        name="name"
-                        id="input-name-modal"
-                        class="form-input"
-                        required
-                        placeholder="Имя"
-                    />
-                    <input
-                        type="tel"
-                        name="tel"
-                        id="input-tel-modal"
-                        class="form-input"
-                        required
-                        placeholder="Телефон"
-                    />
-                    <div class="forms__checkbox">
-                        <input
-                            type="checkbox"
-                            id="forms__checkbox-modal"
-                            required
-                        />
-                        <label
-                            for="forms__checkbox-modal"
-                            id="forms-label-modal"
-                            >Согласие на обработку персональных данных</label
-                        >
-                    </div>
-                    <input
-                        type="submit"
-                        value="ОТПРАВИТЬ"
-                        class="forms__submit"
-                    />
-                </form>
-                <div class="popup__close" id="close__popup">&#10006;</div>
+              Команда
+            </button>
+            <button
+              class="tabs__nav-btn"
+              type="button"
+              data-tab="#tab_2"
+              data-img="#tab__img-2"
+            >
+              Наши компетенции
+            </button>
+            <button
+              class="tabs__nav-btn"
+              type="button"
+              data-tab="#tab_3"
+              data-img="#tab__img-3"
+            >
+              Профессионалы
+            </button>
+            <button
+              class="tabs__nav-btn"
+              type="button"
+              data-tab="#tab_4"
+              data-img="#tab__img-4"
+            >
+              Взаимодействие с органами
+            </button>
+          </div>
+          <div class="about__content row">
+            <div class="about__cards col-xl-10">
+              <div class="tabs__content col-xl-5 col-sm-12">
+                <div class="tabs__item active" id="tab_1">
+                  Fringilla dignissim lectus velit amet nisi erat sit. Nisi
+                  facilisi pretium pharetra amet a mauris amet amet ut. Odio
+                  tellus et in imperdiet pellentesque id. Scelerisque et a proin
+                  nisi. Ut interdum lobortis porta enim viverra eleifend sodales
+                  mollis. Gravida in senectus lacinia eget nec. Mauris eu sed et
+                  quisque dignissim. Odio sed eget id vitae sollicitudin sodales
+                  augue egestas. Sapien elementum nisi est ornare aliquam
+                  viverra nibh amet donec.
+                </div>
+                <div class="tabs__item" id="tab_2">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the 1960s with
+                  the release of Letraset sheets containing Lorem Ipsum
+                  passages, and more recently with desktop publishing software
+                  like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+                <div class="tabs__item" id="tab_3">
+                  The standard chunk of Lorem Ipsum used since the 1500s is
+                  reproduced below for those interested. Sections 1.10.32 and
+                  1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are
+                  also reproduced in their exact original form, accompanied by
+                  English versions from the 1914 translation by H. Rackham.
+                </div>
+                <div class="tabs__item" id="tab_4">
+                  Contrary to popular belief, Lorem Ipsum is not simply random
+                  text. It has roots in a piece of classical Latin literature
+                  from 45 BC, making it over 2000 years old. Richard McClintock,
+                  a Latin professor at Hampden-Sydney College in Virginia,
+                  looked up one of the more obscure Latin words, consectetur,
+                  from a Lorem Ipsum passage, and going through the cites of the
+                  word in classical literature, discovered the undoubtable
+                  source.
+                </div>
+              </div>
+              <div class="col-xl-5 col-sm-12">
+                <img
+                  src="./images/tab-1.png"
+                  class="tabs__image active"
+                  id="tab__img-1"
+                  alt="tab"
+                />
+                <img
+                  src="./images/tab-2.jpg"
+                  class="tabs__image"
+                  id="tab__img-2"
+                  alt="tab"
+                />
+                <img
+                  src="./images/tab-3.jpg"
+                  class="tabs__image"
+                  id="tab__img-3"
+                  alt="tab"
+                />
+                <img
+                  src="./images/tab-4.jpg"
+                  class="tabs__image"
+                  id="tab__img-4"
+                  alt="tab"
+                />
+              </div>
             </div>
+          </div>
         </div>
-        <script src="./js/script.js"></script>
-    </body>
+      </div>
+    </div>
+    <div class="container">
+      <h1 class="info__title">Почему мы?</h1>
+      <div class="info">
+        <div class="info__content">
+          <div class="info__first row">
+            <div class="info__first-card col-xl-3">
+              <img src="./images/target-img.png" alt="target" />
+              <p class="info__card-text">
+                Достижение поставленных клиентом целей
+              </p>
+            </div>
+            <div class="info__first-card col-xl-3">
+              <img src="./images/target-img.png" alt="target" />
+              <p class="info__card-text">
+                Нацелены на долгосрочное сотрудничество
+              </p>
+            </div>
+          </div>
+          <div class="info__second row">
+            <div class="info__second-card col-xl-3">
+              <img src="./images/target-img.png" alt="target" />
+              <p class="info__card-text">Лояльная ценовая политика</p>
+            </div>
+            <div class="info__second-card col-xl-3">
+              <img src="./images/target-img.png" alt="target" />
+              <p class="info__card-text">
+                Всегда готовы идти навстречу клиенту
+              </p>
+            </div>
+          </div>
+          <div class="info__third row">
+            <div class="info__third-card col-xl-3">
+              <img src="./images/target-img.png" alt="target" />
+              <p class="info__card-text">
+                Высокая квалификация и практический опыт
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="info__topic col-xl-4">
+          <p class="info__topic-text">
+            Non diam laoreet faucibus amet ut lacus sed convallis viverra. At
+            purus mattis in consectetur vel.
+          </p>
+          <img
+            src="./images/logo-big.png"
+            class="info__topic-img"
+            alt="target-topic"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h1 class="slider__title">Отзывы о нашей работе</h1>
+      <div class="slider">
+        <div class="slider__item">
+          <img
+            src="./images/review-logo1.png"
+            class="slider__img"
+            alt="slide"
+          />
+          <div class="slider__item-content">
+            <h4 class="slider__item-title">
+              Blandit placerat eget ultrices gravida
+            </h4>
+            <p class="slider__item-text">
+              Nisl id blandit pharetra sodales vel diam vitae. Aliquet pulvinar
+              nunc nam faucibus pellentesque etiam et. Ac iaculis velit amet
+              pulvinar iaculis purus sociis in elementum. Eu ut magna tellus
+              ipsum nibh volutpat aliquam at. Tempor sed habitant lectus quam
+              tristique. Condimentum tortor massa est in eu enim. Metus nullam
+              egestas eget libero vel. Amet nulla egestas et ipsum. met eu ac
+              amet non aliquam et amet. Quis a auctor ut cras suspendisse in sem
+              elementum nisl. Eu aliquet lobortis.
+            </p>
+            <p class="slider__item-name">ИВАНОВ ИВАН</p>
+            <p class="slider__item-post">Коммерческий директор</p>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img
+            src="./images/review-logo2.png"
+            class="slider__img"
+            alt="slide"
+          />
+          <div class="slider__item-content">
+            <h4 class="slider__item-title">
+              Platea libero netus vel mauris massa
+            </h4>
+            <p class="slider__item-text">
+              Ultrices enim vitae dignissim pharetra at. In id enim vulputate
+              massa massa. Nisl quis purus amet mauris egestas porta non. Eget
+              platea pharetra at leo faucibus nibh ipsum convallis euismod. Non
+              quam turpis massa et cras facilisis ut blandit in. Faucibus sed in
+              pellentesque morbi adipiscing proin consequat viverra vitae.
+              Molestie pulvinar facilisi lorem pharetra. In turpis lectus non
+              fermentum scelerisque lectus montes massa leo. Lectus in non
+              tortor cursus. Ultrices sollicitudin cursus dictumst.
+            </p>
+            <p class="slider__item-name">ИВАНОВ ИВАН</p>
+            <p class="slider__item-post">Коммерческий директор</p>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img
+            src="./images/review-logo3.png"
+            class="slider__img"
+            alt="slide"
+          />
+          <div class="slider__item-content">
+            <h4 class="slider__item-title">
+              Sequi eveniet repudiandae dicta eius
+            </h4>
+            <p class="slider__item-text">
+              Nam nunc suspendisse felis augue non pellentesque. Ut nam neque
+              ornare pretium sodales feugiat gravida. Eleifend ut erat ornare
+              ac. Non orci mi eu quam varius commodo mi blandit. Risus nec et
+              amet tincidunt viverra sagittis nunc non. Lectus aliquet tempor
+              pulvinar scelerisque odio condimentum at. Pharetra dolor elit eu
+              aliquam tincidunt ipsum felis viverra. Enim dolor tellus.
+            </p>
+            <p class="slider__item-name">ИВАНОВ ИВАН</p>
+            <p class="slider__item-post">Коммерческий директор</p>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img
+            src="./images/review-logo4.png"
+            class="slider__img"
+            alt="slide"
+          />
+          <div class="slider__item-content">
+            <h4 class="slider__item-title">
+              There are many variations of passages
+            </h4>
+            <p class="slider__item-text">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour, or randomised words which don't look even
+              slightly believable. If you are going to use a passage of Lorem
+              Ipsum, you need to be sure there isn't anything embarrassing
+              hidden in the middle of text. All the Lorem Ipsum generators on
+              the Internet tend.
+            </p>
+            <p class="slider__item-name">ИВАНОВ ИВАН</p>
+            <p class="slider__item-post">Коммерческий директор</p>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img
+            src="./images/review-logo5.png"
+            class="slider__img"
+            alt="slide"
+          />
+          <div class="slider__item-content">
+            <h4 class="slider__item-title">
+              Morbi egestas non purus sit amet consectetur
+            </h4>
+            <p class="slider__item-text">
+              Curabitur nec nulla vitae erat posuere eleifend vel sit amet urna.
+              Pellentesque ornare nunc bibendum ex feugiat vehicula. Nullam
+              mattis mauris eget mi venenatis tristique. Morbi egestas non purus
+              sit amet consectetur. Nam lectus lectus, accumsan non tortor et,
+              tempus volutpat erat. Phasellus at ipsum a ante rutrum congue
+              bibendum in massa. Vivamus efficitur convallis tempor.Nullam
+              mattis mauris eget mi venenatis tristique.
+            </p>
+            <p class="slider__item-name">ИВАНОВ ИВАН</p>
+            <p class="slider__item-post">Коммерческий директор</p>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img
+            src="./images/review-logo6.png"
+            class="slider__img"
+            alt="slide"
+          />
+          <div class="slider__item-content">
+            <h4 class="slider__item-title">
+              Nunc hendrerit est ut massa semper
+            </h4>
+            <p class="slider__item-text">
+              Aenean commodo dolor eu erat porta, nec interdum neque ornare.
+              Praesent laoreet, sapien eu condimentum pellentesque, diam orci
+              vehicula massa, id scelerisque odio sem id est. Nunc eleifend elit
+              et sodales interdum. Suspendisse a tempus quam. Nunc hendrerit est
+              ut massa semper, vel pulvinar lectus placerat. Sed eu augue vitae
+              metus fringilla tristique. Ut sit amet imperdiet odio. Nunc
+              eleifend elit et sodales interdum. Suspendisse a tempus quam.
+            </p>
+            <p class="slider__item-name">ИВАНОВ ИВАН</p>
+            <p class="slider__item-post">Коммерческий директор</p>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img
+            src="./images/review-logo7.png"
+            class="slider__img"
+            alt="slide"
+          />
+          <div class="slider__item-content">
+            <h4 class="slider__item-title">
+              Vestibulum ante ipsum primis in faucibus orci
+            </h4>
+            <p class="slider__item-text">
+              Etiam interdum nibh lectus, a egestas velit accumsan vel. Vivamus
+              id ante eget mi semper imperdiet sed ut urna. Vestibulum pharetra
+              dignissim metus, vel lobortis purus pretium sollicitudin. Cras
+              consectetur libero nec libero feugiat vestibulum. Ut efficitur
+              feugiat lectus quis iaculis. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Morbi volutpat mauris erat, vel
+              tristique sapien vestibulum quis.
+            </p>
+            <p class="slider__item-name">ИВАНОВ ИВАН</p>
+            <p class="slider__item-post">Коммерческий директор</p>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img
+            src="./images/review-logo8.png"
+            class="slider__img"
+            alt="slide"
+          />
+          <div class="slider__item-content">
+            <h4 class="slider__item-title">
+              Maecenas facilisis ipsum nec augue pulvinar
+            </h4>
+            <p class="slider__item-text">
+              Quisque consectetur a magna at egestas. Suspendisse facilisis
+              mauris ac augue faucibus, vel pretium nisi blandit. Vestibulum
+              blandit massa sed volutpat euismod. Vivamus a massa nibh.
+              Vestibulum a molestie orci. Maecenas facilisis ipsum nec augue
+              pulvinar congue. Donec scelerisque elit eu neque dapibus, at
+              iaculis urna iaculis. Nullam semper, velit sed ultricies
+              scelerisque, nec sagittis lectus urna ac augue.
+            </p>
+            <p class="slider__item-name">ИВАНОВ ИВАН</p>
+            <p class="slider__item-post">Коммерческий директор</p>
+          </div>
+        </div>
+        <div class="slider__item">
+          <img
+            src="./images/review-logo9.png"
+            class="slider__img"
+            alt="slide"
+          />
+          <div class="slider__item-content">
+            <h4 class="slider__item-title">
+              Donec nec urna eget est suscipit feugiat accumsan metus
+            </h4>
+            <p class="slider__item-text">
+              Integer sagittis mollis ligula. Pellentesque efficitur, ante
+              elementum interdum condimentum, nibh urna sodales libero, ac
+              sodales velit sem ac justo. Donec nec urna eget est suscipit
+              feugiat. Nunc et tellus libero. Nam semper egestas tortor, et
+              rutrum enim consectetur ac. Morbi justo metus euismod sit amet
+              dapibus malesuada, accumsan ut velit.Nam semper egestas
+              tortor.Morbi justo metus euismod sit amet dapibus malesuada,
+              accumsan ut velit.
+            </p>
+            <p class="slider__item-name">ИВАНОВ ИВАН</p>
+            <p class="slider__item-post">Коммерческий директор</p>
+          </div>
+        </div>
+      </div>
+      <div class="slider__buttons">
+        <button class="slider__button" id="slider__button-prev">
+          <i></i>
+        </button>
+        <button class="slider__button" id="slider__button-next">
+          <i></i>
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="form-content row">
+        <h2 class="form-content__title col-xl-6">
+          <span class="form__title-span">50+</span>
+          <span>компаний доверяют нам. Присоединяйтесь!</span>
+        </h2>
+        <div class="form col-xl-5 col-m-10 col-sm-12">
+          <h5 class="form__title">
+            <span class="form__title-span">Бесплатный</span><br />аудит
+            документации
+          </h5>
+          <form
+            class="forms"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="03fc5892-27b4-4b74-a685-982941c651cc"
+            />
+            <input
+              type="text"
+              name="name"
+              id="input-name"
+              class="form__input"
+              required
+              placeholder="Имя"
+            />
+            <input
+              type="email"
+              name="email"
+              id="input-email"
+              class="form__input"
+              placeholder="E-mail"
+            />
+            <input
+              type="tel"
+              name="tel"
+              id="input-tel"
+              class="form__input"
+              required
+              placeholder="Телефон"
+            />
+            <div class="forms__checkbox">
+              <input type="checkbox" id="forms__checkbox" required />
+              <label for="forms__checkbox" id="forms-label"
+                >Согласие на обработку персональных данных</label
+              >
+            </div>
+            <input type="submit" value="ОТПРАВИТЬ" class="forms__submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <a href="#" class="footer__logo-link">
+          <img class="footer__logo" src="./images/logo.png" alt="SINDNFIS" />
+        </a>
+        <div id="footer__content">
+          <ul class="footer__menu">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Сопровождение бизнеса</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Дист. обучение</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Лицензирование</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">О нас</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <div class="footer__contacts">
+            <a href="https://vk.com/daannnn">
+              <img
+                src="./images/vk.png"
+                class="footer__contacts-image"
+                alt="vk"
+              />
+            </a>
+            <a href="mailto:denispresent4@gmail.com">
+              <img
+                src="./images/mail.png"
+                class="footer__contacts-image"
+                alt="mail"
+              />
+            </a>
+          </div>
+          <button class="footer__button open__popup">ЗАКАЗАТЬ ЗВОНОК</button>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <p class="footer__copyright-text">
+          © СЕВЕРО-ЗАПАДНЫЙ ЮРИДИЧЕСКИЙ ЦЕНТР "АЛЬЯНС" . 2023 г.
+        </p>
+      </div>
+    </footer>
+    <div class="form col-12" id="form-modal">
+      <div class="form__content col-xl-6 col-md-6 col-sm-12" id="form__content">
+        <h5 class="form__title form__title-modal">
+          <span class="form__title-span">ЗАКАЗАТЬ</span><br />ЗВОНОК
+        </h5>
+        <form
+          class="forms"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="03fc5892-27b4-4b74-a685-982941c651cc"
+          />
+          <input
+            type="text"
+            name="name"
+            id="input-name-modal"
+            class="form__input"
+            required
+            placeholder="Имя"
+          />
+          <input
+            type="tel"
+            name="tel"
+            id="input-tel-modal"
+            class="form__input"
+            required
+            placeholder="Телефон"
+          />
+          <div class="forms__checkbox">
+            <input type="checkbox" id="forms__checkbox-modal" required />
+            <label for="forms__checkbox-modal" id="forms-label-modal"
+              >Согласие на обработку персональных данных</label
+            >
+          </div>
+          <input type="submit" value="ОТПРАВИТЬ" class="forms__submit" />
+        </form>
+        <div class="popup__close" id="close__popup">&#10006;</div>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
